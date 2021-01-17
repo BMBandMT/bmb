@@ -8,7 +8,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
 const BlogPostTeaserStyle = styled.article`
-  padding: 35px;
+  padding: 15px;
   padding-bottom: 85px;
   text-decoration: none;
   position: relative;

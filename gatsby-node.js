@@ -15,20 +15,6 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     }
   `)
-  //   const postsPerPage = 9
-  //   const numPages = Math.ceil(pages.data.blog.nodes.length / postsPerPage)
-  //   Array.from({ length: numPages }).forEach((_, i) => {
-  //     createPage({
-  //       path: i === 0 ? `/blog` : `/blog/${i + 1}`,
-  //       component: path.resolve("./src/templates/blog.js"),
-  //       context: {
-  //         limit: postsPerPage,
-  //         skip: i * postsPerPage,
-  //         numPages,
-  //         currentPage: i + 1,
-  //       },
-  //     })
-  //   })
   const postTemplate = path.resolve("src/templates/post.js")
   pages.data.blog.nodes.forEach(node => {
     createPage({
