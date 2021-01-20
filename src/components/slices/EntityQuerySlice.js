@@ -8,9 +8,10 @@ import * as variable from "../variables"
 const EntityQueryStyle = styled.div`
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   article {
     margin-bottom: 40px;
-    width: calc((100%) / 3 - 14px);
+    width: calc((100%) / 3 - 25px);
     margin-right: 20px;
     &:nth-child(3n + 3) {
       margin-right: 0px;

@@ -9,34 +9,32 @@ import Img from "gatsby-image"
 
 const BlogPostTeaserStyle = styled.article`
   padding: 15px;
-  padding-bottom: 85px;
   text-decoration: none;
   position: relative;
   .blog-teaser-title {
     display: block;
     h2 {
-      font-size: 30px;
-      line-height: 40px;
+      font-size: 20px;
+      line-height: 27px;
       font-weight: 400;
+      margin: 35px 0px 0px 0px;
     }
   }
   p {
-    font-size: 25px;
-    line-height: 40px;
+    font-size: 17px;
+    line-height: 27px;
     font-weight: 300;
+    margin-top: 10px;
   }
   .blog-teaser-image {
     margin-bottom: 20px;
   }
   .cta-button {
-    // position: absolute;
-    // bottom: 45px;
-    // left: 35px;
-    font-size: 23px;
-    color: ${variable.blue};
+    font-size: 14px;
+    color: ${variable.blueCta};
   }
   .blog-teaser-image-container {
-    height: 295px;
+    height: 200px;
     width: 100%;
     margin-bottom: 20px;
   }
@@ -48,38 +46,6 @@ const BlogPostTeaserStyle = styled.article`
       background-size: cover;
       border-radius: 10px;
     }
-  }
-  .blog-teaser-links {
-    display: inline-block;
-    text-decoration: none;
-    color: #fff;
-    background-color: ${variable.red};
-    font-weight: 700;
-    text-align: center;
-    font-size: 18px;
-    min-width: 124px;
-    padding: 12px 20px;
-    border: 1px solid transparent;
-    -webkit-transition: background-color 0.3s ease-in-out;
-    transition: background-color 0.3s ease-in-out;
-    position: absolute;
-    bottom: 35px;
-    &:hover {
-      background-color: ${variable.darkGray};
-    }
-  }
-  .release-date {
-    margin-bottom: 10px;
-    font-weight: 700;
-    font-size: 18px;
-  }
-  .blog-author {
-    font-weight: 700;
-    font-size: 18px;
-  }
-  svg {
-    margin-right: 7px;
-    font-size: 20px;
   }
 `
 

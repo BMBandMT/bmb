@@ -15,6 +15,21 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     }
   `)
+  const postsPerPage = 9
+  const numPages = Math.ceil(pages.data.blog.nodes.length / postsPerPage)
+  const insightsTemplate = path.resolve("src/templates/insights.js")
+  Array.from({ length: numPages }).forEach((_, i) => {
+    createPage({
+      path: i === 0 ? `/insights` : `/insights/${i + 1}`,
+      component: insightsTemplate,
+      context: {
+        limit: postsPerPage,
+        skip: i * postsPerPage,
+        numPages,
+        currentPage: i + 1,
+      },
+    })
+  })
   const postTemplate = path.resolve("src/templates/post.js")
   pages.data.blog.nodes.forEach(node => {
     createPage({

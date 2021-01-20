@@ -1,20 +1,13 @@
-@mixin cta-button($bg) {
-  background-color: $bg;
+@mixin cta-button() {
+  background-color: $blue-cta;
   color: white;
-  padding: 12px 30px;
-  // border: thin solid white;
-  border-radius: 4px;
-  text-decoration: none;
+  padding: 9px 15px;
+  border-radius: 10px;
+  font-size: 20px;
+  margin-top: 20px;
   display: inline-block;
-  a {
-    color: white;
-  }
   &:hover {
-    background: lighten($bg, 8%);
-    transition: all 0.3s ease;
-  }
-  &:active {
-    background: lighten($bg, 25%);
+    background: darken($dark-blue, 10%);
   }
 }
 @mixin tablet {

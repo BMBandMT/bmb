@@ -9,7 +9,9 @@ import Img from "gatsby-image"
 import BackgroundImage from "gatsby-background-image"
 import loadable from "@loadable/component"
 
-const InsightsStyle = styled.div``
+const InsightsStyle = styled.div`
+  min-height: 800px;
+`
 
 const InsightsHeader = styled.div`
   margin-bottom: 40px;
@@ -48,6 +50,7 @@ const Post = props => {
   // if (!prismicContent) return null
   // const node = props.data.page.data
   // const site = props.data.site
+  console.log(props)
 
   // const defaultBlock = props.data.prismic.allBlocks.edges[0].node
   // const site = props.data.prismic.allSite_informations.edges[0].node
@@ -66,7 +69,38 @@ const Post = props => {
 export default Post
 
 export const postQuery = graphql`
-  query Insights {
+  query blogListQuery($skip: Int!, $limit: Int!) {
+    blog: allPrismicBlogPost(
+      sort: { order: DESC, fields: data___release_date }
+      limit: $limit
+      skip: $skip
+    ) {
+      nodes {
+        uid
+        data {
+          release_date(formatString: "MMM D Y")
+          teaser {
+            html
+          }
+          author {
+            text
+          }
+          title {
+            text
+          }
+          main_image {
+            url
+            localFile {
+              childImageSharp {
+                fluid(maxWidth: 475) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+        }
+      }
+    }
     blogbg: file(relativePath: { eq: "defaultheader.png" }) {
       childImageSharp {
         fluid(maxWidth: 1920) {

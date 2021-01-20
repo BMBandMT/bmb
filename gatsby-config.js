@@ -61,7 +61,7 @@ module.exports = {
       resolve: "@slixites/gatsby-plugin-google-fonts",
       options: {
         fonts: [
-          `Roboto\:400,500,700,900`, // you can also specify font weights and styles
+          `Roboto\:300,400,500,700,900`, // you can also specify font weights and styles
         ],
         display: "swap",
         preconnect: true,

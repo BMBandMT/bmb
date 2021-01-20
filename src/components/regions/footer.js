@@ -9,14 +9,14 @@ import Img from "gatsby-image"
 const FooterStyle = styled.footer`
   background-color: #000000;
   color: white;
-  padding: 33px 0px;
+  padding: 45px 0px 20px 0px;
   .footer-upper-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-bottom: 20px;
     .logo {
-      width: 100px;
+      width: 80px;
     }
     ul.footer-main-menu {
       width: calc(100% - 120px);
@@ -34,14 +34,14 @@ const FooterStyle = styled.footer`
       a {
         color: white;
         text-decoration: none;
-        font-size: 24px;
+        font-size: 17px;
       }
     }
   }
   .footer-under-container {
     color: white;
     opacity: 50%;
-    margin-top: 80px;
+    margin-top: 75px;
     font-size: 18px;
   }
   .footer-border {

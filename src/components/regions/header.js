@@ -8,7 +8,6 @@ import * as variable from "../variables"
 import MobileMenu from "../mobileMenu"
 
 const HeaderStyle = styled.header`
-  height: 160px;
   z-index: 2;
   position: absolute;
   width: 100%;
@@ -36,8 +35,8 @@ const HeaderStyle = styled.header`
     padding-bottom: 18px;
   }
   .logo {
-    max-width: 140px;
-    width: 140px;
+    max-width: 86px;
+    width: 86px;
     img {
       max-width: 100%;
     }
@@ -76,7 +75,7 @@ const HeaderStyle = styled.header`
       a {
         text-decoration: none;
         color: ${variable.blue};
-        font-size: 26px;
+        font-size: 18px;
         font-weight: bold;
         &:hover {
           color: ${variable.darkBlue};
