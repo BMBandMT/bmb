@@ -4,6 +4,20 @@ import BackgroundImage from "gatsby-background-image"
 import Container from "../container"
 
 const HeroStyle = styled.div`
+  position: relative;
+  &:after {
+    width: 100%;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    height: 100px;
+    position: absolute;
+    bottom: 0px;
+    content: "";
+  }
   section {
     padding: 0px !important;
   }
@@ -14,12 +28,12 @@ const HeroStyle = styled.div`
   }
   h1 {
     font-weight: 800;
-    font-size: 90px;
+    font-size: 60px;
     line-height: 90px;
     color: #005b90 !important;
   }
   .hero-flex {
-    min-height: 530px;
+    min-height: 350px;
   }
 `
 
@@ -27,7 +41,7 @@ export const HeroSlice = ({ slice }) => {
   var font_color = "white"
   var fluid = null
   var hero_title = null
-  var min_height = 530
+  var min_height = 350
   if (slice.primary.background_image != null) {
     fluid = slice.primary.background_image.localFile.childImageSharp.fluid
   }

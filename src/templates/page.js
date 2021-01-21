@@ -48,6 +48,20 @@ const PostSlices = ({ slices, blog }) => {
             </div>
           )
 
+        case "contact":
+          const ContactSlice = loadable(() =>
+            import(`../components/slices/ContactSlice`)
+          )
+          return (
+            <div
+              id={"slice-id-" + sliceID}
+              key={index}
+              className="slice-wrapper slice-contact"
+            >
+              {<ContactSlice slice={slice} />}
+            </div>
+          )
+
         case "block_reference":
           const BlockReferenceSlice = loadable(() =>
             import(`../components/slices/BlockReferenceSlice`)
@@ -499,6 +513,10 @@ export const postQuery = graphql`
                 text
               }
             }
+          }
+          ... on PrismicPaBodyContact {
+            id
+            slice_type
           }
           ... on PrismicPaBodyColumnsSection {
             id

@@ -27,7 +27,7 @@ const FooterStyle = styled.footer`
       li {
         list-style: none;
         margin-left: 20px;
-        &:last-child {
+        &:first-child {
           margin-left: 0px;
         }
       }

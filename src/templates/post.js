@@ -79,9 +79,6 @@ const PostSlices = ({ slices, id }) => {
 const PageStyle = styled.div`
   padding-bottom: ${variable.sectionPadding};
   .blog-post-container {
-    display: flex;
-    justify-content: space-between;
-    -webkit-box-pack: justify;
     @media (max-width: ${variable.mobileWidth}) {
       flex-direction: column;
     }

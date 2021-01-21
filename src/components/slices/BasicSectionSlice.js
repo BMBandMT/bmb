@@ -209,6 +209,7 @@ export const BasicSectionSlice = ({ slice }) => {
     }
   }
   if (slice.primary.background_image.localFile != null) {
+    console.log(slice.primary.background_image.localFile)
     if (slice.primary.background_image.localFile.desktop != null) {
       desktopFluid = slice.primary.background_image.localFile.desktop.fluid
       mobileFluid = slice.primary.background_image.localFile.mobile.fluid
