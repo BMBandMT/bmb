@@ -79,7 +79,6 @@ export const ContactSlice = ({ slice }) => {
               Jamaica, or an investor interested in exclusive Blue Mountain
               coffee production, reach out.
             </p>
-            s
             <form
               name="contact"
               method="POST"
