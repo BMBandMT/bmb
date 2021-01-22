@@ -1,0 +1,338 @@
+#slice-id-services-sustain {
+  h2 {
+    font-size: 30px;
+    text-align: center;
+    color: $blue;
+    font-weight: 500;
+  }
+  p {
+    text-align: center;
+    color: $blue;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 27px;
+  }
+}
+
+#slice-id-services-outgrow {
+  background-color: #a1b7cb;
+  section {
+    padding: 60px 0px 20px 0px;
+  }
+  .column {
+    align-items: center;
+    .column-item {
+      position: relative;
+      &:nth-child(1) {
+        width: 388px;
+        img {
+          position: relative;
+          z-index: 11;
+        }
+      }
+      &:nth-child(2) {
+        width: calc(100% - 388px);
+        background-color: rgba(255, 255, 255, 0.7);
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+        padding: 20px 30px;
+        overflow: visible;
+        &:before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          background-color: rgba(255, 255, 255, 0.7);
+          left: -150px;
+          top: 0px;
+          width: 150px;
+          border-radius: 0px;
+          z-index: 10;
+        }
+        h2 {
+          position: relative;
+          display: flex;
+          align-items: center;
+          font-size: 27px;
+          line-height: 40px;
+          font-weight: 500;
+          &:before {
+            content: "";
+            background-image: url(../../../images/sustainableoutgrowingicon.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            border-radius: 10px;
+            width: 47px;
+            height: 47px;
+            background-position: center;
+            display: block;
+            margin-right: 23px;
+          }
+        }
+        p {
+          font-size: 17px;
+          line-height: 27px;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+}
+
+#slice-id-services-production {
+  background-color: #a1b7cb;
+  section {
+    padding: 20px 0px;
+  }
+  .column {
+    align-items: center;
+    .column-item {
+      position: relative;
+      &:nth-child(2) {
+        width: 388px;
+        img {
+          position: relative;
+          z-index: 11;
+        }
+      }
+      &:nth-child(1) {
+        width: calc(100% - 388px);
+        background-color: rgba(255, 255, 255, 0.7);
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+        padding: 20px 30px;
+        overflow: visible;
+        &:after {
+          content: "";
+          position: absolute;
+          height: 100%;
+          background-color: rgba(255, 255, 255, 0.7);
+          right: -150px;
+          top: 0px;
+          width: 150px;
+          border-radius: 0px;
+          z-index: 10;
+        }
+        h2 {
+          position: relative;
+          display: flex;
+          align-items: center;
+          font-size: 27px;
+          line-height: 40px;
+          font-weight: 500;
+          &:before {
+            content: "";
+            background-image: url(../../../images/commercialproductionicon.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            border-radius: 10px;
+            width: 47px;
+            height: 47px;
+            background-position: center;
+            display: block;
+            margin-right: 23px;
+          }
+        }
+        p {
+          font-size: 17px;
+          line-height: 27px;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+}
+
+#slice-id-services-processing {
+  background-color: #a1b7cb;
+  section {
+    padding: 20px 0px 60px 0px;
+  }
+  .column {
+    align-items: center;
+    .column-item {
+      position: relative;
+      &:nth-child(1) {
+        width: 388px;
+        img {
+          position: relative;
+          z-index: 11;
+        }
+      }
+      &:nth-child(2) {
+        width: calc(100% - 388px);
+        background-color: rgba(255, 255, 255, 0.7);
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+        padding: 20px 30px;
+        overflow: visible;
+        &:before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          background-color: rgba(255, 255, 255, 0.7);
+          left: -150px;
+          top: 0px;
+          width: 150px;
+          border-radius: 0px;
+          z-index: 10;
+        }
+        h2 {
+          position: relative;
+          display: flex;
+          align-items: center;
+          font-size: 27px;
+          line-height: 40px;
+          font-weight: 500;
+          &:before {
+            content: "";
+            background-image: url(../../../images/integratedprocessingicon.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            border-radius: 10px;
+            width: 47px;
+            height: 47px;
+            background-position: center;
+            display: block;
+            margin-right: 23px;
+          }
+        }
+        p {
+          font-size: 17px;
+          line-height: 27px;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+}
+
+#slice-id-services-chain {
+  .basic-slice-container {
+    max-width: 856px;
+  }
+  section {
+    padding-bottom: 0px;
+  }
+  h2 {
+    font-size: 30px;
+    line-height: 45px;
+    text-align: center;
+    font-weight: 500;
+  }
+  p {
+    text-align: center;
+    font-size: 17px;
+    line-height: 27px;
+    font-weight: 300;
+  }
+  .block-img {
+    text-align: center;
+    padding-top: 30px;
+    img {
+      position: relative;
+      left: 20%;
+    }
+  }
+}
+
+#slice-id-services-invest {
+  .basic-slice-container {
+    max-width: 720px;
+  }
+  section {
+    padding: 300px 0px 0px 0px;
+  }
+  .section-content {
+    text-align: center;
+    h2 {
+      font-size: 24px;
+      line-height: 27px;
+      font-weight: 500;
+    }
+    p {
+      text-align: center;
+      font-size: 17px;
+      line-height: 27px;
+      font-weight: 300;
+    }
+    .block-img {
+      position: relative;
+      &:first-child {
+        padding: 0px;
+        margin: 0px;
+        position: absolute;
+        right: 0%;
+        top: 20px;
+      }
+      &:last-child {
+        text-align: left;
+        padding-top: 30px;
+      }
+    }
+  }
+}
+
+#slice-id-services-estate {
+  .basic-slice-container {
+    max-width: 692px;
+  }
+  text-align: center;
+  section {
+    padding: 300px 0px 0px 0px;
+    h2 {
+      font-size: 24px;
+      line-height: 27px;
+      font-weight: 500;
+    }
+    p {
+      text-align: center;
+      font-size: 17px;
+      line-height: 27px;
+      font-weight: 300;
+    }
+    .block-img {
+      position: relative;
+      &:first-child {
+        padding: 0px;
+        margin: 0px;
+        position: absolute;
+        left: 0%;
+        top: 20px;
+      }
+    }
+  }
+}
+
+#slice-id-services-global {
+  .basic-slice-container {
+    max-width: 664px;
+  }
+  text-align: center;
+  section {
+    padding: 300px 0px 0px 0px;
+    h2 {
+      font-size: 24px;
+      line-height: 27px;
+      font-weight: 500;
+    }
+    p {
+      text-align: center;
+      font-size: 17px;
+      line-height: 27px;
+      font-weight: 300;
+    }
+    .block-img {
+      position: relative;
+      &:first-child {
+        padding: 0px;
+        margin: 0px;
+        position: absolute;
+        right: 0%;
+        top: 20px;
+      }
+      &:nth-child(5) {
+        margin-top: 40px;
+      }
+    }
+  }
+}

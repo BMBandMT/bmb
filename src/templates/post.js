@@ -13,6 +13,7 @@ import Img from "gatsby-image"
 // import BasicSectionSlice from "../components/slices/BasicSectionSlice"
 import BackgroundImage from "gatsby-background-image"
 import loadable from "@loadable/component"
+import leaves from "../images/twoleavesnew.png"
 
 // Sort and display the different slice options
 const PostSlices = ({ slices, id }) => {
@@ -61,7 +62,7 @@ const PostSlices = ({ slices, id }) => {
           )
           return (
             <div
-              id={"slice-id-" + id}
+              id={"slice-id-" + slice.primary.slice_id.text}
               key={index}
               className="slice-wrapper slice-basic"
             >
@@ -77,6 +78,10 @@ const PostSlices = ({ slices, id }) => {
 }
 
 const PageStyle = styled.div`
+  max-width: 880px;
+  margin: 0 auto;
+  position: relative;
+  top: -150px;
   padding-bottom: ${variable.sectionPadding};
   .blog-post-container {
     @media (max-width: ${variable.mobileWidth}) {
@@ -93,25 +98,20 @@ const PageStyle = styled.div`
         border-radius: 10px;
       }
     }
-    .blog-post-right {
-      width: calc(25% - 20px);
-      top: 60px;
-      position: sticky;
-      align-self: flex-start;
-      @media (max-width: ${variable.tabletWidth}) {
-        width: calc(35% - 20px);
-      }
-      @media (max-width: ${variable.mobileWidth}) {
-        width: 100%;
-        margin-top: 40px;
-      }
-    }
   }
   h1 {
     margin-top: 0px;
+    font-size: 30px;
+    line-height: 37px;
   }
   h2 {
     margin-bottom: 0px;
+  }
+  p {
+    font-size: 17px;
+    line-height: 27px;
+    font-weight: 300;
+    margin: 25px 0px;
   }
   img {
     border-radius: 4px;
@@ -119,8 +119,8 @@ const PageStyle = styled.div`
   }
   .release-date {
     margin-bottom: 10px;
-    font-weight: 700;
-    font-size: 18px;
+    font-weight: 300;
+    font-size: 17px;
   }
   .blog-author {
     font-weight: 700;
@@ -139,16 +139,20 @@ const PageStyle = styled.div`
       position: relative !important;
     }
   }
-  .blog-post-main {
-    max-width: 1200px;
-    margin: 0 auto;
+  .blog-line {
+    width: 83px;
+    height: 3px;
+    background-color: ${variable.blue};
+  }
+  .two-leaves {
+    text-align: center;
+    margin-top: 40px;
   }
 `
 
 const BlogHeader = styled.div`
-  margin-bottom: 40px;
   .blog-header-container {
-    min-height: 530px;
+    min-height: 350px;
     display: flex;
     align-items: flex-end;
     justify-content: flex-start;
@@ -182,7 +186,7 @@ const Post = props => {
   // if (!prismicContent) return null
   const node = props.data.page.data
   const site = props.data.site
-
+  const defaultBlock = props.data.defaultBlock.data
   // const defaultBlock = props.data.prismic.allBlocks.edges[0].node
   // const site = props.data.prismic.allSite_informations.edges[0].node
 
@@ -208,18 +212,22 @@ const Post = props => {
                   />
                 )}
               </div>
-              <h1>{node.title.text}</h1>
               {node.release_date && (
                 <div className="release-date">{node.release_date}</div>
               )}
-              {node.author && (
-                <div className="blog-author">{node.author.text}</div>
-              )}
+              <h1>{node.title.text}</h1>
+              <div className="blog-line"></div>
               {node.body && <PostSlices slices={node.body} />}
+              <div className="two-leaves">
+                <img src={leaves} />
+              </div>
             </div>
           </div>
         </Container>
       </PageStyle>
+      <div className="post-footer">
+        <PostSlices slices={defaultBlock.body} id={defaultBlock.body[0].id} />
+      </div>
     </Layout>
   )
 }
@@ -228,6 +236,58 @@ export default Post
 
 export const postQuery = graphql`
   query PostBySlug($uid: String!) {
+    defaultBlock: prismicBlocks(
+      id: { eq: "48b37aa4-1796-5b39-bea6-1df89eeb303e" }
+    ) {
+      data {
+        body {
+          ... on PrismicBlocksBodyBasicSection {
+            id
+            slice_type
+            primary {
+              slice_id {
+                text
+              }
+              background_color
+              background_image {
+                localFile {
+                  mobilesmall: childImageSharp {
+                    fluid(quality: 90, maxWidth: 360) {
+                      ...GatsbyImageSharpFluid_withWebp_tracedSVG
+                    }
+                  }
+                  mobile: childImageSharp {
+                    fluid(quality: 90, maxWidth: 800) {
+                      ...GatsbyImageSharpFluid_withWebp_tracedSVG
+                    }
+                  }
+                  desktop: childImageSharp {
+                    fluid(quality: 90, maxWidth: 1920) {
+                      ...GatsbyImageSharpFluid_withWebp_tracedSVG
+                    }
+                  }
+                }
+              }
+              background_video {
+                url
+              }
+              content {
+                html
+                raw
+              }
+              font_color
+              h1_title
+              section_title {
+                text
+              }
+              youtube_background {
+                embed_url
+              }
+            }
+          }
+        }
+      }
+    }
     blogbg: file(relativePath: { eq: "defaultheader.png" }) {
       childImageSharp {
         fluid(maxWidth: 1920) {

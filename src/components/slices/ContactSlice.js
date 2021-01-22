@@ -72,13 +72,14 @@ export const ContactSlice = ({ slice }) => {
   return (
     <Container>
       <ContactStyle>
-        <p>
-          If you’re a coffee buyer, trader or roaster seeking a producer in
-          Jamaica, or an investor interested in exclusive Blue Mountain coffee
-          production, reach out.
-        </p>
         <div className="contact-outer">
           <div className="contact-form-left">
+            <p>
+              If you’re a coffee buyer, trader or roaster seeking a producer in
+              Jamaica, or an investor interested in exclusive Blue Mountain
+              coffee production, reach out.
+            </p>
+            s
             <form
               name="contact"
               method="POST"
