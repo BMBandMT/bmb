@@ -76,6 +76,9 @@
           width: 150px;
           border-radius: 0px;
           z-index: 10;
+          @include mobile() {
+            display: none;
+          }
         }
         h2 {
           position: relative;
@@ -161,6 +164,9 @@
           width: 150px;
           border-radius: 0px;
           z-index: 10;
+          @include mobile() {
+            display: none;
+          }
         }
         h2 {
           position: relative;
@@ -243,6 +249,9 @@
           width: 150px;
           border-radius: 0px;
           z-index: 10;
+          @include mobile() {
+            display: none;
+          }
         }
         h2 {
           position: relative;
