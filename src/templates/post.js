@@ -380,7 +380,7 @@ export const postQuery = graphql`
         meta_description
         meta_title
         donotindex
-        release_date(formatString: "MMM D ,Y")
+        release_date(formatString: "MMM D, Y")
         main_image {
           url
           localFile {
