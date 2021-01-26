@@ -1,7 +1,10 @@
 import React from "react"
 import Container from "../container"
 import styled from "styled-components"
-
+import * as variable from "../variables"
+import phoneIcon from "../../images/phoneicon.png"
+import emailIcon from "../../images/email.png"
+import locationIcon from "../../images/locationicon.png"
 const ContactStyle = styled.div`
   padding: 75px 0px;
   margin: 0 auto;
@@ -13,9 +16,54 @@ const ContactStyle = styled.div`
   }
   .contact-form-left {
     width: calc(75% - 35px);
+    @media (max-width: ${variable.mobileWidth}) {
+      width: 100%;
+      margin-bottom: 40px;
+    }
   }
   .contact-form-right {
     width: 25%;
+    font-size: 17px;
+    line-height: 23px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @media (max-width: ${variable.mobileWidth}) {
+      width: 100%;
+    }
+    a {
+      font-size: 17px;
+      line-height: 23px;
+    }
+    .contact-phone {
+      margin-bottom: 20px;
+      background-image: url(${phoneIcon});
+      background-size: 20px;
+      background-repeat: no-repeat;
+      background-position: left top;
+      padding-left: 40px;
+    }
+    .contact-email {
+      margin-bottom: 20px;
+      background-image: url(${emailIcon});
+      background-size: 20px;
+      background-repeat: no-repeat;
+      background-position: left top;
+      padding-left: 40px;
+    }
+    .contact-address {
+      background-image: url(${locationIcon});
+      background-size: 20px;
+      background-repeat: no-repeat;
+      background-position: left top;
+      padding-left: 40px;
+      div {
+        &:last-child {
+          font-weight: 300;
+          line-height: 20px;
+        }
+      }
+    }
   }
   input {
     width: 100%;

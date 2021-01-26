@@ -5,7 +5,7 @@
       "config": {
         "single": "heading1",
         "label": "Title",
-        "placeholder": "Blog post title..."
+        "placeholder": "Press post title..."
       }
     },
     "uid": {
@@ -32,6 +32,13 @@
       "config": {
         "multi": "paragraph",
         "label": "Teaser"
+      }
+    },
+    "article_link": {
+      "type": "Link",
+      "config": {
+        "allowTargetBlank": true,
+        "label": "Article Link"
       }
     },
     "main_image": {
@@ -94,10 +101,7 @@
               "image": {
                 "type": "Image",
                 "config": {
-                  "constraint": {
-                    "width": 840,
-                    "height": 540
-                  },
+                  "constraint": {},
                   "thumbnails": [],
                   "label": "Image"
                 }

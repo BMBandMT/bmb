@@ -8,6 +8,11 @@ exports.createPages = async ({ graphql, actions }) => {
           uid
         }
       }
+      press: allPrismicPress {
+        nodes {
+          uid
+        }
+      }
       page: allPrismicPa {
         nodes {
           uid
@@ -40,7 +45,31 @@ exports.createPages = async ({ graphql, actions }) => {
       },
     })
   })
-
+  const pressPerPage = 9
+  const numPressPages = Math.ceil(pages.data.press.nodes.length / pressPerPage)
+  const pressIndexTemplate = path.resolve("src/templates/pressindex.js")
+  Array.from({ length: numPressPages }).forEach((_, i) => {
+    createPage({
+      path: i === 0 ? `/press` : `/press/${i + 1}`,
+      component: pressIndexTemplate,
+      context: {
+        limit: pressPerPage,
+        skip: i * pressPerPage,
+        numPressPages,
+        currentPage: i + 1,
+      },
+    })
+  })
+  const pressTemplate = path.resolve("src/templates/press.js")
+  pages.data.press.nodes.forEach(node => {
+    createPage({
+      path: `/press/${node.uid}`,
+      component: pressTemplate,
+      context: {
+        uid: node.uid,
+      },
+    })
+  })
   const pageTemplate = path.resolve("src/templates/page.js")
   pages.data.page.nodes.forEach(node => {
     if (node.uid == "home") {

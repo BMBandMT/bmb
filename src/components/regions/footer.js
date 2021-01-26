@@ -15,6 +15,9 @@ const FooterStyle = styled.footer`
     justify-content: space-between;
     align-items: center;
     padding-bottom: 20px;
+    @media (max-width: ${variable.mobileWidth}) {
+      flex-direction: column;
+    }
     .logo {
       width: 80px;
     }
@@ -24,6 +27,13 @@ const FooterStyle = styled.footer`
       justify-content: space-between;
       justify-content: flex-end;
       align-items: center;
+      margin-left: 0px;
+      padding-left: 0px;
+      @media (max-width: ${variable.mobileWidth}) {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+      }
       li {
         list-style: none;
         margin-left: 20px;
@@ -43,6 +53,9 @@ const FooterStyle = styled.footer`
     opacity: 50%;
     margin-top: 75px;
     font-size: 18px;
+    @media (max-width: ${variable.mobileWidth}) {
+      text-align: center;
+    }
   }
   .footer-border {
     width: 100%;

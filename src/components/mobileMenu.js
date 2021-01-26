@@ -33,14 +33,14 @@ const MobileContainer = styled.div`
     a {
       display: block !important;
       text-align: left;
-      color: ${variable.darkGray};
+      color: ${variable.darkBlue};
       text-decoration: none;
       font-size: 27px;
       &:focus {
         outline: none !important;
       }
       &.active {
-        color: ${variable.red};
+        color: ${variable.blue};
       }
     }
     ul {
@@ -70,10 +70,10 @@ const MobileContainer = styled.div`
       top: 0;
     }
     .bm-cross {
-      background: #000000;
+      background: ${variable.darkBlue};
     }
     .bm-burger-bars {
-      background: #000000;
+      background: ${variable.darkBlue};
       border-radius: 10px;
     }
     .bm-menu {
@@ -85,7 +85,7 @@ const MobileContainer = styled.div`
   }
 `
 const activeStyle = {
-  color: variable.red,
+  color: variable.blue,
 }
 const Wrapper = styled.div`
   * {
@@ -109,7 +109,7 @@ const MenuToggle = styled.div`
     position: absolute;
     height: 7px;
     width: 100%;
-    background: #000000;
+    background: ${variable.darkBlue};
     border-radius: 10px;
     opacity: 1;
     left: 0;

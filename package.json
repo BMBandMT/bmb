@@ -70,6 +70,7 @@
     "react-media-player": "^0.7.9",
     "react-player": "^2.6.0",
     "react-responsive-embed": "^2.1.0",
+    "react-share": "^4.3.1",
     "react-stack-grid": "^0.7.1",
     "react-stonecutter": "^0.3.10",
     "react-typeform-embed": "^0.2.1",

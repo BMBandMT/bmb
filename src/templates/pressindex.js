@@ -5,7 +5,7 @@ import * as variable from "../components/variables"
 import styled from "styled-components"
 import Container from "../components/container"
 import BackgroundImage from "gatsby-background-image"
-import BlogPostTeaser from "../components/entities/blog_post/BlogPostTeaser"
+import PressTeaser from "../components/entities/press/PressTeaser"
 import loadable from "@loadable/component"
 import "../components/scss/blocks/footer.scss"
 const InsightsStyle = styled.div`
@@ -79,7 +79,7 @@ const InsightsHeader = styled.div`
 const EntityResult = ({ blog }) => {
   console.log(blog)
   return blog.nodes.map((post, index) => (
-    <BlogPostTeaser post={post} key={index}></BlogPostTeaser>
+    <PressTeaser post={post} key={index}></PressTeaser>
   ))
 }
 
@@ -133,7 +133,7 @@ const Post = props => {
       </InsightsHeader>
       <InsightsStyle>
         <Container className="blog-index-container">
-          <EntityResult blog={props.data.blog} />
+          <EntityResult blog={props.data.press} />
         </Container>
       </InsightsStyle>
       <div className="blog-post-right">
@@ -146,16 +146,11 @@ const Post = props => {
 export default Post
 
 export const postQuery = graphql`
-  query blogListQuery($skip: Int!, $limit: Int!) {
-    blog: allPrismicBlogPost(
-      sort: { order: DESC, fields: data___release_date }
-      limit: $limit
-      skip: $skip
-    ) {
+  query pressListQuery($skip: Int!, $limit: Int!) {
+    press: allPrismicPress(limit: $limit, skip: $skip) {
       nodes {
         uid
         data {
-          release_date(formatString: "MMM D Y")
           teaser {
             html
           }
