@@ -95,17 +95,18 @@
     padding-bottom: 0px;
   }
   h2 {
-    font-size: 30px;
-    line-height: 40px;
-    text-align: center;
     color: $blue;
-    margin-bottom: 40px;
     font-weight: normal;
+    font-size: 30px;
+    text-align: center;
+    font-weight: 500;
   }
   p {
+    text-align: center;
+    color: $blue;
+    font-weight: 300;
     font-size: 18px;
     line-height: 27px;
-    text-align: center;
   }
   a {
     @include cta-button;
@@ -288,7 +289,7 @@
   h2.entity-section-header {
     text-align: center;
     font-size: 30px;
-    font-weight: 400;
-    color: $blue-cta;
+    font-weight: 500;
+    color: $blue;
   }
 }

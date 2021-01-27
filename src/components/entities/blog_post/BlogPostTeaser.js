@@ -32,6 +32,9 @@ const BlogPostTeaserStyle = styled.article`
   .cta-button {
     font-size: 14px;
     color: ${variable.blueCta};
+    position: absolute;
+    bottom: 0px;
+    left: 15px;
   }
   .blog-teaser-image-container {
     height: 200px;

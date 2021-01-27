@@ -9,7 +9,7 @@ import Img from "gatsby-image"
 const FooterStyle = styled.footer`
   background-color: #000000;
   color: white;
-  padding: 45px 0px 20px 0px;
+  padding: 30px 0px 20px 0px;
   .footer-upper-container {
     display: flex;
     justify-content: space-between;
@@ -51,8 +51,8 @@ const FooterStyle = styled.footer`
   .footer-under-container {
     color: white;
     opacity: 50%;
-    margin-top: 75px;
-    font-size: 18px;
+    margin-top: 40px;
+    font-size: 14px;
     @media (max-width: ${variable.mobileWidth}) {
       text-align: center;
     }

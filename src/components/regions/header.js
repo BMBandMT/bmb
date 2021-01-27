@@ -35,8 +35,8 @@ const HeaderStyle = styled.header`
     padding-bottom: 18px;
   }
   .logo {
-    max-width: 86px;
-    width: 86px;
+    max-width: 95px;
+    width: 95px;
     img {
       max-width: 100%;
     }

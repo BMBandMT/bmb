@@ -89,7 +89,7 @@ const PageStyle = styled.div`
   max-width: 880px;
   margin: 0 auto;
   position: relative;
-  top: -150px;
+  top: 150px;
   padding-bottom: ${variable.sectionPadding};
   .blog-post-container {
     @media (max-width: ${variable.mobileWidth}) {
@@ -190,6 +190,8 @@ const PageStyle = styled.div`
 `
 
 const BlogHeader = styled.div`
+  position: absolute;
+  width: 100%;
   .blog-header-container {
     min-height: 350px;
     display: flex;
@@ -204,7 +206,6 @@ const BlogHeader = styled.div`
       margin-bottom: 20px;
     }
   }
-  position: relative;
   &:after {
     width: 100%;
     background: rgb(255, 255, 255);
