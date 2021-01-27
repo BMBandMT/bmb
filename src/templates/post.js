@@ -89,7 +89,7 @@ const PageStyle = styled.div`
   max-width: 880px;
   margin: 0 auto;
   position: relative;
-  top: 150px;
+  top: 200px;
   padding-bottom: ${variable.sectionPadding};
   .blog-post-container {
     @media (max-width: ${variable.mobileWidth}) {
@@ -164,6 +164,7 @@ const PageStyle = styled.div`
   .two-leaves {
     text-align: center;
     margin-top: 40px;
+    margin-bottom: 150px;
   }
   .date-share {
     display: flex;
