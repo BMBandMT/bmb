@@ -14,6 +14,14 @@ import Img from "gatsby-image"
 import BackgroundImage from "gatsby-background-image"
 import loadable from "@loadable/component"
 import leaves from "../images/twoleavesnew.png"
+import facebookIcon from "../images/facebook.png"
+import linkedinIcon from "../images/linkedin.png"
+import twitterIcon from "../images/twitter.png"
+import {
+  FacebookShareButton,
+  LinkedinShareButton,
+  TwitterShareButton,
+} from "react-share"
 
 // Sort and display the different slice options
 const PostSlices = ({ slices, id }) => {
@@ -78,17 +86,19 @@ const PostSlices = ({ slices, id }) => {
 }
 
 const PageStyle = styled.div`
-  max-width: 880px;
+  max-width: 840px;
   margin: 0 auto;
   position: relative;
-  top: -150px;
-  padding-bottom: ${variable.sectionPadding};
+  padding-bottom: 0px;
+  padding-top: 60px;
   .blog-post-container {
     @media (max-width: ${variable.mobileWidth}) {
       flex-direction: column;
     }
     .main-image {
       margin-bottom: 40px;
+      max-width: 471px;
+      margin: 0 auto;
       img {
         border-radius: 10px;
       }
@@ -100,12 +110,21 @@ const PageStyle = styled.div`
     }
   }
   h1 {
-    margin-top: 0px;
     font-size: 30px;
     line-height: 37px;
+    font-weight: 500;
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto;
   }
   h2 {
     margin-bottom: 0px;
+    font-size: 23px;
+    line-height: 32px;
+    font-weight: 500;
+    strong {
+      font-weight: 500;
+    }
   }
   p {
     font-size: 17px;
@@ -144,9 +163,59 @@ const PageStyle = styled.div`
     height: 3px;
     background-color: ${variable.blue};
   }
+  .date-share {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 35px;
+    margin-top: 45px;
+    .blue-share {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 135px;
+      align-items: center;
+      img {
+        width: 22px;
+        height: 22px;
+      }
+      .blue-share-text {
+        font-size: 17px;
+        font-weight: 300;
+      }
+    }
+  }
   .two-leaves {
     text-align: center;
     margin-top: 40px;
+    img {
+      width: 198px;
+      height: auto;
+    }
+  }
+  .press-by-line {
+    text-align: center;
+    font-size: 17px;
+    line-height: 27px;
+    margin: 20px;
+  }
+  .read-article {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    a {
+      border: 2px solid ${variable.darkBlue};
+      border-radius: 10px;
+      padding: 5px 20px;
+      font-size: 17px;
+      line-height: 27px;
+      font-weight: 500;
+      &:hover {
+        color: white;
+        background-color: ${variable.darkBlue};
+      }
+    }
   }
 `
 
@@ -189,7 +258,8 @@ const Post = props => {
   const defaultBlock = props.data.defaultBlock.data
   // const defaultBlock = props.data.prismic.allBlocks.edges[0].node
   // const site = props.data.prismic.allSite_informations.edges[0].node
-
+  const shareUrl =
+    "https://bluemountainbest.netlify.app/press/" + props.data.page.uid
   return (
     <Layout>
       <SEO site={site} page={props.data.page}></SEO>
@@ -212,11 +282,33 @@ const Post = props => {
                   />
                 )}
               </div>
+              <div className="date-share">
+                {node.release_date && (
+                  <div className="release-date">{node.release_date}</div>
+                )}
+                <div className="blue-share">
+                  <div className="blue-share-text">Share:</div>
+                  <FacebookShareButton url={shareUrl}>
+                    <img src={facebookIcon} />
+                  </FacebookShareButton>
+                  <LinkedinShareButton url={shareUrl}>
+                    <img src={linkedinIcon} />
+                  </LinkedinShareButton>
+                  <TwitterShareButton url={shareUrl}>
+                    <img src={twitterIcon} />
+                  </TwitterShareButton>
+                </div>
+              </div>
               {node.release_date && (
                 <div className="release-date">{node.release_date}</div>
               )}
               <h1>{node.title.text}</h1>
-              <div className="blog-line"></div>
+              <div class="press-by-line">By: {node.author.text}</div>
+              <div class="read-article">
+                <a href={node.article_link.url} target="_blank">
+                  Read the Article in {node.article_site_name.text}
+                </a>
+              </div>
               {node.body && <PostSlices slices={node.body} />}
               <div className="two-leaves">
                 <img src={leaves} />
@@ -327,6 +419,12 @@ export const postQuery = graphql`
         meta_title
         donotindex
         release_date(formatString: "MMM D ,Y")
+        article_link {
+          url
+        }
+        article_site_name {
+          text
+        }
         main_image {
           url
           localFile {

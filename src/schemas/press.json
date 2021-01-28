@@ -41,6 +41,13 @@
         "label": "Article Link"
       }
     },
+    "article_site_name": {
+      "type": "StructuredText",
+      "config": {
+        "single": "paragraph",
+        "label": "Article Site Name"
+      }
+    },
     "main_image": {
       "type": "Image",
       "config": {

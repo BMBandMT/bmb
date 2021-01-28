@@ -16,7 +16,7 @@ const InsightsStyle = styled.div`
     flex-wrap: wrap;
     article {
       margin-bottom: 40px;
-      width: calc((100%) / 3 - 25px);
+      width: calc((100%) / 2 - 190px);
       margin-right: 20px;
       &:nth-child(3n + 3) {
         margin-right: 0px;
@@ -126,7 +126,7 @@ const Post = props => {
         <BackgroundImage fluid={props.data.blogbg.childImageSharp.fluid}>
           <Container className="hero-slice-container">
             <div className="hero-flex" style={{ minHeight: min_height }}>
-              <h1>Insights</h1>
+              <h1>Press</h1>
             </div>
           </Container>
         </BackgroundImage>

@@ -165,6 +165,10 @@ const PageStyle = styled.div`
     text-align: center;
     margin-top: 40px;
     margin-bottom: 150px;
+    img {
+      width: 198px;
+      height: auto;
+    }
   }
   .date-share {
     display: flex;

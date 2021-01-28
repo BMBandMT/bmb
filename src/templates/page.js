@@ -5,6 +5,7 @@ import * as variable from "../components/variables"
 import styled from "styled-components"
 import "../components/scss/page/home.scss"
 import "../components/scss/page/services.scss"
+import "../components/scss/page/about.scss"
 import SEO from "../components/seo"
 import { ReactTypeformEmbed } from "react-typeform-embed"
 

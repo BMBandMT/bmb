@@ -37,13 +37,16 @@ const BlogPostTeaserStyle = styled.article`
     height: 200px;
     width: 100%;
     margin-bottom: 20px;
+    background-color: #f4f7f9;
+    padding: 60px;
+    border-radius: 20px;
   }
   .gatsby-image-wrapper {
     width: 100%;
     height: 100%;
     border-radius: 10px;
     &:before {
-      background-size: cover;
+      background-size: contain;
       border-radius: 10px;
     }
   }

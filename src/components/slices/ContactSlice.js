@@ -16,6 +16,11 @@ const ContactStyle = styled.div`
   }
   .contact-form-left {
     width: calc(75% - 35px);
+    p {
+      &:first-child {
+        font-weight: 300;
+      }
+    }
     @media (max-width: ${variable.mobileWidth}) {
       width: 100%;
       margin-bottom: 40px;
@@ -62,13 +67,17 @@ const ContactStyle = styled.div`
           font-weight: 300;
           line-height: 20px;
         }
+        &:nth-child(2) {
+          font-weight: 300;
+          line-height: 20px;
+        }
       }
     }
   }
   input {
     width: 100%;
     -webkit-appearance: none;
-    border: 3px solid #1e5b8d;
+    border: 2px solid #92abc2;
     border-radius: 7px;
     padding: 15px 20px;
     font-size: 17px;
@@ -82,7 +91,7 @@ const ContactStyle = styled.div`
   textarea {
     width: 100%;
     -webkit-appearance: none;
-    border: 3px solid #1e5b8d;
+    border: 2px solid #92abc2;
     border-radius: 7px;
     padding: 15px 20px;
     height: 240px;
@@ -174,7 +183,8 @@ export const ContactSlice = ({ slice }) => {
             </div>
             <div className="contact-address">
               <div>Blue Mountain Best</div>
-              <div>Sheridan, Wyoming WyomingWyoming</div>
+              <div>Sheridan, Wyoming</div>
+              <div>Kingston, Jamaica</div>
             </div>
           </div>
         </div>

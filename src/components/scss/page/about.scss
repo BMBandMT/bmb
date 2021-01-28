@@ -1,0 +1,194 @@
+#slice-id-about-sowing {
+  .basic-slice-container {
+    max-width: 947px;
+  }
+  h2 {
+    font-size: 30px;
+    line-height: 38px;
+    text-align: center;
+    color: $blue;
+    font-weight: 500;
+  }
+  p {
+    text-align: center;
+    color: $blue;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 27px;
+  }
+}
+#slice-id-about-our-team {
+  .basic-slice-container {
+    .section-content {
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 10px;
+      background-image: url(../../../images/logotransparentlarge.png);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 420px;
+      padding: 100px;
+      @include mobile() {
+        padding: 20px;
+        background-size: 320px;
+      }
+    }
+    h2 {
+      text-align: center;
+      font-size: 30px;
+      line-height: 38px;
+      color: $dark-blue;
+      font-weight: 500;
+    }
+    p {
+      text-align: center;
+      font-size: 18px;
+      line-height: 28px;
+      font-weight: 300;
+    }
+  }
+}
+#slice-id-about-coffee {
+  h2 {
+    font-size: 30px;
+    line-height: 45px;
+    font-weight: 500;
+    text-align: center;
+    color: $dark-blue;
+  }
+  p {
+    font-size: 17px;
+    line-height: 27px;
+    text-align: center;
+    font-weight: 300;
+  }
+  .block-img {
+    &:nth-child(3) {
+      margin-top: 60px;
+      margin-bottom: 40px;
+      img {
+        width: 198px;
+        height: auto;
+      }
+    }
+  }
+  h2 {
+    &:nth-child(4) {
+      font-size: 30px;
+      line-height: 45px;
+      font-weight: 500;
+      text-align: center;
+      color: $dark-blue;
+    }
+  }
+  p {
+    &:nth-child(5) {
+      max-width: 457px;
+      margin: 0 auto;
+    }
+  }
+}
+#slice-id-about-globally {
+  section {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  .column {
+    background-image: url(../../../images/leacf.png);
+    background-position: center bottom 100px;
+    background-size: 60px;
+    background-repeat: no-repeat;
+    flex-wrap: wrap;
+    @include mobile() {
+      flex-direction: column;
+      background-image: none;
+    }
+    .column-item {
+      max-width: 420px;
+      @include tablet() {
+        max-width: calc(50% - 120px);
+      }
+      @include mobile() {
+        max-width: 100%;
+        width: 100% !important;
+      }
+    }
+  }
+  .block-img {
+    text-align: center;
+    img {
+      width: 282px;
+      height: auto;
+    }
+  }
+  h2 {
+    font-size: 24px;
+    line-height: 27px;
+    font-weight: 500;
+    color: $dark-blue;
+    max-width: 100px;
+    text-align: center;
+    margin: 40px auto 0px auto;
+  }
+  p {
+    text-align: center;
+    font-size: 17px;
+    line-height: 27px;
+    font-weight: 300;
+  }
+}
+#slice-id-about-vines {
+  section {
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
+  .column {
+    .column-item {
+      &:nth-child(1) {
+        .block-img {
+          text-align: right;
+          margin-right: 40px;
+        }
+      }
+      &:nth-child(2) {
+        .block-img {
+          text-align: left;
+          margin-left: 40px;
+        }
+      }
+      .block-img {
+        img {
+          width: 282px;
+          height: auto;
+        }
+      }
+    }
+  }
+}
+#slice-id-about-luxory {
+  section {
+    padding-top: 0px;
+  }
+  h2 {
+    text-align: center;
+    color: $dark-blue;
+    font-size: 24px;
+    line-height: 27px;
+    font-weight: 500;
+  }
+  p {
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 27px;
+    text-align: center;
+    color: $dark-blue;
+    max-width: 573px;
+    margin: 0 auto;
+  }
+  .block-img {
+    margin-top: 40px;
+    img {
+      width: 198px;
+      height: auto;
+    }
+  }
+}

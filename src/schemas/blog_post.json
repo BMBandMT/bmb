@@ -95,8 +95,8 @@
                 "type": "Image",
                 "config": {
                   "constraint": {
-                    "width": 840,
-                    "height": 540
+                    "width": 1680,
+                    "height": 1328
                   },
                   "thumbnails": [],
                   "label": "Image"
