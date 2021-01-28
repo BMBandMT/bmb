@@ -318,6 +318,9 @@
   }
   section {
     padding: 300px 0px 0px 0px;
+    @include mobile() {
+      padding: 40px 0px 0px 0px;
+    }
   }
   .section-content {
     text-align: center;
@@ -343,6 +346,9 @@
         position: absolute;
         right: 0%;
         top: 20px;
+        @include mobile() {
+          display: none;
+        }
         img {
           width: 279px;
           height: auto;
@@ -369,6 +375,9 @@
   text-align: center;
   section {
     padding: 300px 0px 0px 0px;
+    @include mobile() {
+      padding: 40px 0px 0px 0px;
+    }
     h2 {
       font-size: 24px;
       line-height: 27px;
@@ -391,6 +400,9 @@
         position: absolute;
         left: 0%;
         top: 20px;
+        @include mobile() {
+          display: none;
+        }
         img {
           width: 279px;
           height: auto;
@@ -413,6 +425,9 @@
   text-align: center;
   section {
     padding: 300px 0px 0px 0px;
+    @include mobile() {
+      padding: 40px 0px 0px 0px;
+    }
     h2 {
       font-size: 24px;
       line-height: 27px;
@@ -435,6 +450,9 @@
         position: absolute;
         right: 0%;
         top: 20px;
+        @include mobile() {
+          display: none;
+        }
         img {
           width: 279px;
           height: auto;

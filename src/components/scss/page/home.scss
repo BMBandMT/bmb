@@ -129,10 +129,16 @@
       height: auto;
     }
   }
+  @include mobile() {
+    display: none;
+  }
 }
 #slice-id-home-services {
   section {
     padding: 0px;
+    @include mobile() {
+      padding: 40px 0px;
+    }
   }
   .column {
     justify-content: center;
@@ -153,6 +159,9 @@
     flex-direction: column;
     text-align: center;
     padding: 10px 50px 10px 50px;
+    &:hover {
+      background-color: #a1b7cb;
+    }
     @include tablet() {
       max-width: 100%;
       width: 373px !important;
@@ -226,12 +235,18 @@
           width: 272px;
           height: auto;
         }
+        @include mobile() {
+          display: none;
+        }
       }
       &:nth-child(2) {
         width: 30% !important;
         text-align: center;
         a {
           @include cta-button;
+        }
+        @include mobile() {
+          width: 100% !important;
         }
       }
       &:nth-child(3) {
@@ -241,6 +256,9 @@
           max-width: 100%;
           width: 272px;
           height: auto;
+        }
+        @include mobile() {
+          display: none;
         }
       }
     }
@@ -258,6 +276,9 @@
     &:nth-child(1) {
       width: 20% !important;
       padding-right: 40px;
+      @include mobile() {
+        display: none;
+      }
     }
     &:nth-child(2) {
       width: 60% !important;
@@ -275,10 +296,16 @@
           }
         }
       }
+      @include mobile() {
+        width: 100% !important;
+      }
     }
     &:nth-child(3) {
       width: 20% !important;
       padding-left: 40px;
+      @include mobile() {
+        display: none;
+      }
     }
   }
 }

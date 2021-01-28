@@ -1,6 +1,6 @@
 #slice-id-about-sowing {
   .basic-slice-container {
-    max-width: 947px;
+    max-width: 1000px;
   }
   h2 {
     font-size: 30px;
@@ -48,6 +48,9 @@
   }
 }
 #slice-id-about-coffee {
+  .basic-slice-container {
+    max-width: 1000px;
+  }
   h2 {
     font-size: 30px;
     line-height: 45px;
@@ -116,8 +119,11 @@
   .block-img {
     text-align: center;
     img {
-      width: 282px;
+      width: 200px;
       height: auto;
+    }
+    @include mobile() {
+      display: none;
     }
   }
   h2 {
@@ -157,11 +163,14 @@
       }
       .block-img {
         img {
-          width: 282px;
+          width: 200px;
           height: auto;
         }
       }
     }
+  }
+  @include mobile() {
+    display: none;
   }
 }
 #slice-id-about-luxory {

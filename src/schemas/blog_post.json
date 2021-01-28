@@ -96,7 +96,7 @@
                 "config": {
                   "constraint": {
                     "width": 1680,
-                    "height": 1328
+                    "height": 1080
                   },
                   "thumbnails": [],
                   "label": "Image"
