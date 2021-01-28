@@ -65,12 +65,15 @@ function returnImage(post) {
   }
 }
 export const BlogPostTeaser = ({ post }) => {
-  const dates = new Date(post.data.release_date)
-  const formattedDate = Intl.DateTimeFormat("en-US", {
-    year: "numeric",
-    month: "short",
-    day: "2-digit",
-  }).format(dates)
+  if (post.data.release_date) {
+    const dates = new Date(post.data.release_date)
+    const formattedDate = Intl.DateTimeFormat("en-US", {
+      year: "numeric",
+      month: "short",
+      day: "2-digit",
+    }).format(dates)
+  }
+
   return (
     <BlogPostTeaserStyle>
       <div className="blog-teaser-image-container">{returnImage(post)}</div>
