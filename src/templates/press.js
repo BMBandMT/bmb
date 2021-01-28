@@ -283,9 +283,6 @@ const Post = props => {
                 )}
               </div>
               <div className="date-share">
-                {node.release_date && (
-                  <div className="release-date">{node.release_date}</div>
-                )}
                 <div className="blue-share">
                   <div className="blue-share-text">Share:</div>
                   <FacebookShareButton url={shareUrl}>
