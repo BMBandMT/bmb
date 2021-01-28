@@ -52,7 +52,7 @@ const EntityResult = ({ slice, blog }) => {
 
   if (slice.primary.entity_type == "Blog Post") {
     return blog.nodes
-      .slice(0, slice.primary.entity_count)
+      .slice(0, slice.primary.number_of_entities)
       .map((post, index) => (
         <BlogPostTeaser post={post} key={index}></BlogPostTeaser>
       ))
@@ -67,6 +67,8 @@ export const EntityQuerySlice = ({ slice, blog }) => {
   var bg_color = null
 
   var entityCount = null
+
+  console.log(slice)
 
   if (slice.primary.background_imageSharp != null) {
     fluid = slice.primary.background_image.localFile.childImageSharp.fluid
