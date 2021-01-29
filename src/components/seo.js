@@ -27,11 +27,13 @@ function SEO({ site, page, lang, meta }) {
     if (page.data.meta_description) {
       metaDescription = page.data.meta_description
     } else {
-      metaDescription = page.data.body[0].primary.text.text.replace(
-        /<[^>]*>/g,
-        ""
-      )
-      metaDescription = metaDescription.substring(0, 400) + "..."
+      if (page.data.body[0]) {
+        metaDescription = page.data.body[0].primary.text.text.replace(
+          /<[^>]*>/g,
+          ""
+        )
+        metaDescription = metaDescription.substring(0, 400) + "..."
+      }
     }
   }
   var twitterPlayer = ""
