@@ -184,7 +184,7 @@ const Post = props => {
   const { currentPage, numPressPages } = props.pageContext
   const isFirst = currentPage === 1
   const isLast = currentPage === numPressPages
-  const prevPage = currentPage - 1 === 1 ? "/" : (currentPage - 1).toString()
+  const prevPage = currentPage - 1 === 1 ? "" : (currentPage - 1).toString()
   const nextPage = (currentPage + 1).toString()
   console.log(props)
   return (
@@ -205,7 +205,7 @@ const Post = props => {
         <Container className="pager">
           <div className="pager-previous-container">
             {!isFirst && (
-              <Link to={"/press/" + prevPage} rel="prev">
+              <Link to={"/press" + prevPage} rel="prev">
                 Prev
               </Link>
             )}
@@ -216,7 +216,7 @@ const Post = props => {
               <Link
                 className="pager-link"
                 key={`pagination-number${i + 1}`}
-                to={`/press/${i === 0 ? "" : i + 1}`}
+                to={`/press${i === 0 ? "" : "/" + (i + 1)}`}
               >
                 {i + 1}
               </Link>
@@ -224,7 +224,7 @@ const Post = props => {
           </div>
           <div className="pager-next-container">
             {!isLast && (
-              <Link to={"/press/" + nextPage} rel="next">
+              <Link to={"/press" + nextPage} rel="next">
                 Next
               </Link>
             )}
