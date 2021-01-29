@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import * as variable from "../components/variables"
 import styled from "styled-components"
@@ -36,6 +36,68 @@ const InsightsStyle = styled.div`
         &:last-child {
           margin-bottom: 0px;
         }
+      }
+    }
+  }
+  .pager {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    .pager-next-container {
+      min-width: 50px;
+      a {
+        background-color: ${variable.blue};
+        color: white;
+        padding: 9px 15px;
+        border-radius: 10px;
+        font-size: 18px;
+        margin-top: 20px;
+        display: inline-block;
+        &:hover {
+          background: darken($dark-blue, 10%);
+        }
+      }
+    }
+    .pager-previous-container {
+      min-width: 50px;
+      a {
+        background-color: ${variable.blue};
+        color: white;
+        padding: 9px 15px;
+        border-radius: 10px;
+        font-size: 18px;
+        margin-top: 20px;
+        display: inline-block;
+        &:hover {
+          background: darken($dark-blue, 10%);
+        }
+      }
+    }
+  }
+  .pager-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a {
+      padding: 9px 15px;
+      border-radius: 10px;
+      font-size: 18px;
+      margin-top: 20px;
+      display: inline-block;
+      margin-left: 10px;
+      background-color: white;
+      border: 2px solid ${variable.blue};
+      color: ${variable.blue};
+      &:first-child {
+        margin-left: 0px;
+      }
+      &:hover {
+        background: darken($dark-blue, 10%);
+      }
+      &[aria-current] {
+        background-color: ${variable.blue};
+        color: white;
       }
     }
   }
@@ -119,7 +181,12 @@ const Post = props => {
 
   // const defaultBlock = props.data.prismic.allBlocks.edges[0].node
   // const site = props.data.prismic.allSite_informations.edges[0].node
-
+  const { currentPage, numPressPages } = props.pageContext
+  const isFirst = currentPage === 1
+  const isLast = currentPage === numPressPages
+  const prevPage = currentPage - 1 === 1 ? "/" : (currentPage - 1).toString()
+  const nextPage = (currentPage + 1).toString()
+  console.log(props)
   return (
     <Layout>
       <InsightsHeader>
@@ -134,6 +201,34 @@ const Post = props => {
       <InsightsStyle>
         <Container className="blog-index-container">
           <EntityResult blog={props.data.press} />
+        </Container>
+        <Container className="pager">
+          <div className="pager-previous-container">
+            {!isFirst && (
+              <Link to={"/press/" + prevPage} rel="prev">
+                Prev
+              </Link>
+            )}
+          </div>
+
+          <div className="pager-container">
+            {Array.from({ length: numPressPages }, (_, i) => (
+              <Link
+                className="pager-link"
+                key={`pagination-number${i + 1}`}
+                to={`/press/${i === 0 ? "" : i + 1}`}
+              >
+                {i + 1}
+              </Link>
+            ))}
+          </div>
+          <div className="pager-next-container">
+            {!isLast && (
+              <Link to={"/press/" + nextPage} rel="next">
+                Next
+              </Link>
+            )}
+          </div>
         </Container>
       </InsightsStyle>
       <div className="blog-post-right">

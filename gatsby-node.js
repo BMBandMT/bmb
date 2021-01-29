@@ -20,7 +20,7 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     }
   `)
-  const postsPerPage = 9
+  const postsPerPage = 6
   const numPages = Math.ceil(pages.data.blog.nodes.length / postsPerPage)
   const insightsTemplate = path.resolve("src/templates/insights.js")
   Array.from({ length: numPages }).forEach((_, i) => {
@@ -45,7 +45,7 @@ exports.createPages = async ({ graphql, actions }) => {
       },
     })
   })
-  const pressPerPage = 9
+  const pressPerPage = 6
   const numPressPages = Math.ceil(pages.data.press.nodes.length / pressPerPage)
   const pressIndexTemplate = path.resolve("src/templates/pressindex.js")
   Array.from({ length: numPressPages }).forEach((_, i) => {
