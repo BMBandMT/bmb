@@ -174,10 +174,10 @@ export const ContactSlice = ({ slice }) => {
           </div>
           <div className="contact-form-right">
             <div className="contact-phone">
-              <a href="tel:1.800.626.3521">1.800.626.3521</a>
+              <a href="tel:1.307.201.9965">1.307.201.9965</a>
             </div>
             <div className="contact-email">
-              <a href="mailto:contact@bluemountainbest.com">
+              <a href="mailto:marie.leblanc@massivebluemountain.com">
                 contact@bluemountainbest.com
               </a>
             </div>
