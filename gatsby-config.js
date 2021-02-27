@@ -13,6 +13,12 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
+      resolve: `gatsby-plugin-facebook-pixel`,
+      options: {
+        pixelId: "241104827685370",
+      },
+    },
+    {
       resolve: "gatsby-plugin-robots-txt",
       options: {
         host: "https://www.bluemountainbest.com",
