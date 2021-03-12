@@ -18,3 +18,20 @@ a {
     text-decoration: underline;
   }
 }
+// #opp {
+//   color: white;
+// }
+// #opp * {
+//   color: white;
+// }
+#opp {
+  header {
+    display: none;
+  }
+  * {
+    color: white;
+  }
+}
+.hidden {
+  display: none;
+}
