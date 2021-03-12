@@ -461,7 +461,7 @@ const Mt = () => {
           }
         }
       }
-      bmbLogo: file(relativePath: { eq: "BMBLogo.png" }) {
+      bmbLogo: file(relativePath: { eq: "bmbnew.png" }) {
         childImageSharp {
           fluid(maxWidth: 400) {
             ...GatsbyImageSharpFluid

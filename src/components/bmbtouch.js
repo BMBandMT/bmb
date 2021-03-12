@@ -178,6 +178,7 @@ const jamaicaTitle = props => {
 const jamaicaInvest = props => {
   const { inViewport, forwardedRef } = props
   const htmlClass = inViewport ? "squaregrow" : ""
+  console.log(props.data.whiteBmbNew)
   return (
     <div
       className={`jamaica-invest  squaregrow-initial-dis ` + htmlClass}
