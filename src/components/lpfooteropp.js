@@ -384,8 +384,8 @@ const LpFooter = () => {
               from a luxury estate primed for worldwide retail growth. As an
               investor, you join{" "}
               <span class="footer-bmb">Blue Mountain Best</span> and hundreds of
-              family farms in a partnership to open Jamaican coffee to the
-              global luxury market.
+              family farms in a partnership to seek global profits from the
+              luxury coffee market.
             </p>
             <p>
               If you’re an accredited investor, fill out the form below and our
