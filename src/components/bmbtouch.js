@@ -190,7 +190,7 @@ const jamaicaInvest = props => {
             production, trade and retail growth of Blue Mountain coffee.
           </div>
           <div>
-            <Img fixed={props.data.whiteBmb.childImageSharp.fixed} />
+            <Img fixed={props.data.whiteBmbNew.childImageSharp.fixed} />
             <p>
               <AnchorLink className="mt-start" href="#lpfooter">
                 Get In Touch
@@ -244,7 +244,7 @@ const Hero = () => {
           }
         }
       }
-      whiteBmb: file(relativePath: { eq: "BMBLogo.png" }) {
+      whiteBmbNew: file(relativePath: { eq: "bmbnew.png" }) {
         childImageSharp {
           fixed(width: 230, height: 221) {
             ...GatsbyImageSharpFixed
