@@ -395,6 +395,7 @@ const LpFooter = () => {
           <form
             name="opportunity"
             method="POST"
+            action="/thanks"
             netlify-honeypot="bot-field"
             data-netlify="true"
           >
