@@ -223,7 +223,7 @@ const jamaicaTitle2 = props => {
     >
       <h3>
         Become a partner with a commercial producer to increase production, profits, and
-        global fair trade of luxury coffee
+        global fair trade
       </h3>
     </div>
   )
