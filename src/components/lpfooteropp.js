@@ -381,11 +381,8 @@ const LpFooter = () => {
             <p>
               With a minimum investment of $25,000, investing in{" "}
               <span class="footer-bmb">Blue Mountain Best</span> secures profits
-              from a luxury estate primed for worldwide retail growth. As an
-              investor, you join{" "}
-              <span class="footer-bmb">Blue Mountain Best</span> and hundreds of
-              family farms in a partnership to seek global profits from the
-              luxury coffee market.
+              from a luxury estate primed for worldwide retail growth. Invest in {" "}
+              <span class="footer-bmb">Blue Mountain Best</span> to seek global profits with a commercial production of world-class luxury coffee.
             </p>
             <p>
               If you’re an accredited investor, fill out the form below and our
