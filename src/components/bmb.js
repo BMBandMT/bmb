@@ -477,8 +477,7 @@ const Mt = () => {
           <div className="mt-secure">
             <MtSecureHeaderBlock />
             <p>
-              Directly invest in Blue Mountain Best and become a partner with
-              local farms to share in the profits of luxury Blue Mountain
+              Directly invest in Blue Mountain Best to share in the profits of luxury Blue Mountain
               Coffee.
             </p>
             <AnchorLink className="mt-start" href="#lpfooter">

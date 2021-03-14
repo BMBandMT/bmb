@@ -168,8 +168,8 @@ const jamaicaTitle = props => {
       ref={forwardedRef}
     >
       <h2>
-        Become a partner with local farmers to increase production, profits, and
-        global fair trade
+        Become a partner with a commercial producer to increase production, profits, and
+        global fair trade of luxury coffee
       </h2>
     </div>
   )
@@ -222,7 +222,7 @@ const jamaicaTitle2 = props => {
       ref={forwardedRef}
     >
       <h3>
-        Become a partner with local farmers to increase production, profits, and
+        Become a partner with a commercial producer to increase production, profits, and
         global fair trade
       </h3>
     </div>

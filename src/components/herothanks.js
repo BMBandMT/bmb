@@ -53,7 +53,7 @@ class Hero extends Component {
         >
           <div className="thank-you-box">
             <h2>Thank You!</h2>
-            <p>Your form submission has been reveived.</p>
+            <p>Your form submission has been received.</p>
             <Link to="/">Back to our website.</Link>
           </div>
         </BackgroundImage>
