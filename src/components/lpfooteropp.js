@@ -392,7 +392,6 @@ const LpFooter = () => {
           <form
             name="opportunity"
             method="POST"
-            action="https://massivebluemountain.com/thanks"
             netlify-honeypot="bot-field"
             data-netlify="true"
           >
