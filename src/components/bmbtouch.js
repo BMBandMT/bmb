@@ -201,7 +201,7 @@ const jamaicaInvest = props => {
           <div>
             Through farm syndication and community partnership, Blue Mountain
             Best brings modern agricultural methods and global investment to
-            luxury coffee’s most exlcusive crop, priming Blue Mountain coffee
+            luxury coffee’s most exclusive crop, priming Blue Mountain coffee
             for worldwide retail growth.
           </div>
         </div>
