@@ -53,8 +53,15 @@ const FooterStyle = styled.footer`
     opacity: 50%;
     margin-top: 40px;
     font-size: 14px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
     @media (max-width: ${variable.mobileWidth}) {
       text-align: center;
+    }
+    div, a{
+      font-size: 14px;
+      color: white;
     }
   }
   .footer-border {
@@ -191,8 +198,13 @@ export const Footer = () => {
       <div class="footer-border"></div>
       <Container className="footer-container-below">
         <div class="footer-under-container">
-          &copy; {new Date().getFullYear()} Blue Mountain Best | All Rights
+          <div className="footer-under-left">
+            &copy; {new Date().getFullYear()} Blue Mountain Best | All Rights
           Reserved
+          </div>
+          <div className="footer-under-right">
+            <Link to="/confidentiality-policy">Confidentiality Policy</Link>
+          </div>
         </div>
       </Container>
     </FooterStyle>
