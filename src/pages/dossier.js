@@ -10,6 +10,10 @@ const HeroStyle = styled.div`
   header {
     /* display: none; */
   }
+  p,
+  h2 {
+    color: #000000;
+  }
   footer {
     padding-top: 0px;
     border-top: 0px;
