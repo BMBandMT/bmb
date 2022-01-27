@@ -312,7 +312,7 @@ const LpfooterStyle = styled.div`
             font-weight: 400;
           }
           &:hover {
-            color: white;
+            color: rgb(27, 90, 141) !important;
             background-color: #ffffff;
           }
         }
