@@ -74,6 +74,14 @@ module.exports = {
       },
     },
     {
+      resolve: "gatsby-plugin-web-font-loader",
+      options: {
+        typekit: {
+          id: process.env.TYPEKIT_ID,
+        },
+      },
+    },
+    {
       resolve: "@slixites/gatsby-plugin-google-fonts",
       options: {
         fonts: [
@@ -108,6 +116,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-netlify-headers`,
+    `gatsby-plugin-smoothscroll`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

@@ -4,45 +4,52 @@ import styled from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
 import Container from "./container"
 import * as variable from "./variables"
-import down from "../images/downcaret.png"
+import down from "../images/down.png"
 import handleViewport from "react-in-viewport"
 
 const LpfooterStyle = styled.div`
   #lpfooter {
     padding: 100px 0px 60px 0px;
     * {
-      color: black;
+      color: #ffffff;
     }
     h2 {
-      color: #000000;
+      color: #ffffff;
       text-align: center;
-      font-size: 24px;
-      line-height: 32px;
+      font-size: 40px;
+      line-height: 48px;
       font-weight: 700;
-      max-width: 500px;
       margin: 0 auto;
       padding-bottom: 3px;
+    }
+    h3 {
+      text-align: center;
+      font-size: 40px;
+      line-height: 48px;
+      font-weight: normal;
+      font-style: italic;
+      margin: 0px;
     }
     .centergrow-initial {
       margin: 0 auto;
       max-width: 500px;
       display: block;
       &:after {
-        border-bottom: solid 2px #000000;
+        border-bottom: solid 2px #ffffff;
       }
     }
     p {
       text-align: center;
-      font-size: 17px;
-      line-height: 23px;
+      font-size: 20px;
+      line-height: 24px;
       font-weight: 400;
-      max-width: 815px;
+      max-width: 910px;
       margin: 20px auto 0px auto;
       span.footer-mt {
         color: #23a455;
       }
       span.footer-bmb {
-        color: #164871;
+        color: #ffffff;
       }
     }
     form {
@@ -101,11 +108,18 @@ const LpfooterStyle = styled.div`
             }
           }
           &.form-row-inputs-city {
+            justify-content: flex-start;
             input {
               width: calc(100% / 3 - 10px);
+              &:nth-child(1) {
+                margin-right: 20px;
+              }
               @media (max-width: ${variable.mobileWidth}) {
                 width: 100%;
                 margin: 10px 0px;
+                &:nth-child(1) {
+                  margin-right: 0px;
+                }
               }
             }
           }
@@ -140,7 +154,7 @@ const LpfooterStyle = styled.div`
                 position: absolute;
                 top: 20px;
                 right: 20px;
-                color: black;
+                color: #ffffff;
               }
               @media (max-width: ${variable.mobileWidth}) {
                 width: 100%;
@@ -190,7 +204,7 @@ const LpfooterStyle = styled.div`
           background: transparent;
           width: 100%;
           -webkit-appearance: none;
-          border: 2px solid #000000;
+          border: 2px solid #ffffff;
           border-radius: 5px;
           padding: 9px 20px;
           font-size: 17px;
@@ -199,7 +213,7 @@ const LpfooterStyle = styled.div`
             outline: none;
           }
           &::placeholder {
-            color: #000000;
+            color: #ffffff;
             font-size: 17px;
             font-weight: 400;
           }
@@ -208,7 +222,7 @@ const LpfooterStyle = styled.div`
           background: transparent;
           width: 100%;
           -webkit-appearance: none;
-          border: 2px solid #000000;
+          border: 2px solid #ffffff;
           border-radius: 5px;
           padding: 9px 20px;
           font-size: 17px;
@@ -217,7 +231,7 @@ const LpfooterStyle = styled.div`
             outline: none;
           }
           &::placeholder {
-            color: #000000;
+            color: #ffffff;
             font-size: 17px;
             font-weight: 400;
           }
@@ -226,7 +240,7 @@ const LpfooterStyle = styled.div`
           background: transparent;
           width: 100%;
           -webkit-appearance: none;
-          border: 2px solid #000000;
+          border: 2px solid #ffffff;
           border-radius: 5px;
           padding: 9px 20px;
           font-size: 17px;
@@ -235,7 +249,7 @@ const LpfooterStyle = styled.div`
             outline: none;
           }
           &::placeholder {
-            color: #000000;
+            color: #ffffff;
             font-size: 17px;
             font-weight: 400;
           }
@@ -244,7 +258,7 @@ const LpfooterStyle = styled.div`
           background: transparent;
           width: 100%;
           -webkit-appearance: none;
-          border: 2px solid #000000;
+          border: 2px solid #ffffff;
           border-radius: 5px;
           padding: 9px 20px;
           font-size: 17px;
@@ -253,7 +267,7 @@ const LpfooterStyle = styled.div`
             outline: none;
           }
           &::placeholder {
-            color: #000000;
+            color: #ffffff;
             font-size: 17px;
             font-weight: 400;
           }
@@ -261,7 +275,7 @@ const LpfooterStyle = styled.div`
         input[type="checkbox"] {
           background: transparent;
           -webkit-appearance: none;
-          border: 2px solid #000000;
+          border: 2px solid #ffffff;
           margin-right: 5px;
           padding: 5px;
           position: relative;
@@ -280,9 +294,9 @@ const LpfooterStyle = styled.div`
         }
         input.contact-submit {
           background: transparent;
-          color: #000000;
+          color: #ffffff;
           -webkit-appearance: none;
-          border: 2px solid #000000;
+          border: 2px solid #ffffff;
           border-radius: 5px;
           padding: 9px 30px;
           font-size: 17px;
@@ -293,20 +307,20 @@ const LpfooterStyle = styled.div`
             outline: none;
           }
           &::placeholder {
-            color: #000000;
+            color: #ffffff;
             font-size: 17px;
             font-weight: 400;
           }
           &:hover {
             color: white;
-            background-color: #000000;
+            background-color: #ffffff;
           }
         }
         select {
           background: transparent;
           width: 100%;
           -webkit-appearance: none;
-          border: 2px solid #000000;
+          border: 2px solid #ffffff;
           border-radius: 5px;
           padding: 9px 20px;
           font-size: 17px;
@@ -319,7 +333,7 @@ const LpfooterStyle = styled.div`
             outline: none;
           }
           &::placeholder {
-            color: #000000;
+            color: #ffffff;
             font-size: 17px;
             font-weight: 400;
           }
@@ -360,7 +374,7 @@ const opts = {
 const LpFooter = () => {
   const data = useStaticQuery(graphql`
     query LpOppQuery {
-      footerBg: file(relativePath: { eq: "LPFooterTrans.png" }) {
+      footerBg: file(relativePath: { eq: "FooterLighter.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 3840) {
             ...GatsbyImageSharpFluid
@@ -376,26 +390,27 @@ const LpFooter = () => {
         fluid={data.footerBg.childImageSharp.fluid}
       >
         <Container>
-          <TitleBlock />
+          <h2>Invest in Jamaican Blue Mountain coffee.</h2>
+          <h3>The World’s Most Sought After</h3>
           <div className="form-copy">
             <p>
-              With a minimum investment of $25,000, investing in{" "}
-              <span class="footer-bmb">Blue Mountain Best</span> secures profits
-              from a luxury estate primed for worldwide retail growth. Invest in {" "}
-              <span class="footer-bmb">Blue Mountain Best</span> to seek global profits with a commercial producer of world-class luxury coffee.
-            </p>
-            <p>
-              If you’re an accredited investor, fill out the form below and our
-              team will reach out to you.
+              With a minimum investment of $25,000, investing in Blue Mounatin
+              Best secures profit from our luxury coffee estate. If you’re an
+              accredited investor and woud like to learn more, please fill out
+              the form below and our team will reach out to you.
             </p>
           </div>
           <form
-            name="opportunity"
+            name="opportunity-new-2022"
             method="POST"
             netlify-honeypot="bot-field"
             data-netlify="true"
           >
-            <input type="hidden" name="form-name" value="opportunity" />
+            <input
+              type="hidden"
+              name="form-name"
+              value="opportunity-new-2022"
+            />
             <p className="hidden">
               <label>
                 Don’t fill this out if you’re human: <input name="bot-field" />
@@ -431,12 +446,6 @@ const LpFooter = () => {
                   name="state"
                   placeholder="State"
                 />
-                <input
-                  type="text"
-                  id="country"
-                  name="country"
-                  placeholder="Country"
-                />
               </div>
             </div>
             <div className="form-row">
@@ -463,28 +472,7 @@ const LpFooter = () => {
                 />
               </div>
             </div>
-            <div className="form-row">
-              <label>How did you hear about us?*</label>
-              <div className="form-row-inputs form-row-inputs-hear">
-                <select name="hear" id="hear" required>
-                  <option value="">Select...</option>
-                  <option value="Forbes">Forbes</option>
-                  <option value="Reuters">Reuters</option>
-                  <option value="Entrepreneur">Entrepreneur</option>
-                  <option value="Investing">Investing.com</option>
-                  <option value="Benzinga">Benzinga</option>
-                  <option value="CEO Magazine">CEO Magazine</option>
-                  <option value="Equities">Equities.com</option>
-                  <option value="Google">Google</option>
-                  <option value="LinkedIn">LinkedIn</option>
-                  <option value="Facebook">Facebook</option>
-                  <option value="YouTube">YouTube</option>
-                  <option value="Instagram">Instagram</option>
-                  <option value="Email">Email</option>
-                  <option value="Referral">Referral</option>
-                </select>
-              </div>
-            </div>
+
             <div className="form-row">
               <label>Best Time to Call</label>
               <div className="form-row-inputs form-row-inputs-time">

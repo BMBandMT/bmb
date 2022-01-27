@@ -11,12 +11,8 @@ import AnchorLink from "react-anchor-link-smooth-scroll"
 
 const MtStyle = styled.div`
   #mt {
-    padding: 0px 0px 100px 0px;
-    min-height: 800px;
+    padding: 100px 0px 100px 0px;
     color: white;
-    @media (max-width: ${variable.mobileWidth}) {
-      padding: 100px 0px;
-    }
     .mt-top-2 {
       display: flex;
       flex-wrap: wrap;
@@ -318,7 +314,7 @@ const mtVideo = props => {
       className={`mt-video squaregrow-initial ` + htmlClass}
       ref={forwardedRef}
     >
-      <YouTube videoId="q8nNmqFWtCM" opts={opts} />
+      <YouTube videoId="v_sTDh5rOag" opts={opts} />
       <span class="focus-border">
         <i></i>
       </span>
@@ -447,7 +443,7 @@ const opts = {
 const Mt = () => {
   const data = useStaticQuery(graphql`
     query BmbQuery {
-      mtBg: file(relativePath: { eq: "MidImage2.png" }) {
+      mtBg: file(relativePath: { eq: "MiddleImage.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 3840) {
             ...GatsbyImageSharpFluid
@@ -474,40 +470,6 @@ const Mt = () => {
     <MtStyle>
       <BackgroundImage id="mt" fluid={data.mtBg.childImageSharp.fluid}>
         <Container>
-          <div className="mt-secure">
-            <MtSecureHeaderBlock />
-            <p>
-              Directly invest in Blue Mountain Best to share in the profits of luxury Blue Mountain
-              Coffee.
-            </p>
-            <AnchorLink className="mt-start" href="#lpfooter">
-              Get Started
-            </AnchorLink>
-          </div>
-          <div className="bmb-bottom-2">
-            <BmbLeftBlock />
-            <div>
-              <p>
-                Blue Mountain Best uses farm syndication to bring equitable
-                investment to community farms, champion direct trade, and
-                introduce the historic profits of the specialty coffee market to
-                sought after Blue Mountain coffee.
-              </p>
-              <p>
-                “With many consumers unable to buy coffee in person,” the{" "}
-                <span>US Chamber of Commerce</span> wrote recently, “[luxury]
-                coffee companies that offer home delivery are seeing strong
-                demand.”
-              </p>
-            </div>
-          </div>
-          <div className="bmb-bottom-3">
-            <BmbLeftCenterBlock />
-            <div className="bmb-bottom-3-item bmb-bottom-3-item-center">
-              <Img fluid={data.bmbLogo.childImageSharp.fluid} />
-            </div>
-            <BmbRightCenterBlock />
-          </div>
           <BmbVideoBlock />
         </Container>
       </BackgroundImage>

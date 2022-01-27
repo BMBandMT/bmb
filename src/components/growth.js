@@ -6,21 +6,28 @@ import { useStaticQuery, graphql } from "gatsby"
 import Container from "./container"
 import handleViewport from "react-in-viewport"
 import * as variable from "./variables"
+import scrollTo from "gatsby-plugin-smoothscroll"
 
 const JamaicaStyle = styled.div`
   #jamaica {
-    padding: 175px 0px 100px 0px;
+    padding: 40px 0px 80px 0px;
     color: white;
     text-align: center;
+    background-color: #1b5a8d;
     @media (max-width: ${variable.mobileWidth}) {
       padding: 50px 0px 50px 0px;
     }
     h2 {
       margin: 0px;
       text-align: center;
-      font-size: 28px;
-      line-height: 37px;
-      font-weight: 500;
+      font-size: 30px;
+      line-height: 36px;
+      font-weight: normal;
+      max-width: 700px;
+      margin: 0 auto;
+      &.h2-below {
+        max-width: 775px;
+      }
     }
     .jamaica-top-3 {
       display: flex;
@@ -31,7 +38,7 @@ const JamaicaStyle = styled.div`
 
       > div {
         width: calc(100% / 3 - 25px);
-        font-size: 18px;
+        font-size: 20px;
         line-height: 24px;
         font-weight: 400;
         @media (max-width: ${variable.mobileWidth}) {
@@ -39,86 +46,39 @@ const JamaicaStyle = styled.div`
           margin-bottom: 40px;
         }
         .jamaica-top-large {
-          font-size: 28px;
-          font-weight: 500;
-          margin-bottom: 10px;
-        }
-      }
-    }
-    .jamaica-mid-2 {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      div {
-        &:first-child {
-          font-size: 28px;
-          line-height: 37px;
-          font-weight: 500;
-          text-align: left;
-          width: 50%;
-          @media (max-width: ${variable.mobileWidth}) {
-            width: 100%;
-          }
-        }
-        &:last-child {
-          font-size: 18px;
-          line-height: 24px;
-          font-weight: 400;
-          text-align: left;
-          width: 48%;
-          @media (max-width: ${variable.mobileWidth}) {
-            width: 100%;
-          }
-        }
-      }
-    }
-    h3 {
-      margin: 150px 0px 0px 0px;
-      text-align: center;
-      font-size: 28px;
-      line-height: 37px;
-      font-weight: 500;
-    }
-    .jamaica-bottom-3 {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      margin-top: 90px;
-      > div {
-        width: calc(100% / 3 - 25px);
-        font-size: 18px;
-        line-height: 24px;
-        font-weight: 400;
-        &:first-child {
-          width: calc(100% / 3 - 30px);
-        }
-        .jamaica-bottom-large {
-          font-size: 28px;
-          font-weight: 500;
-          margin-bottom: 10px;
-        }
-        @media (max-width: ${variable.mobileWidth}) {
-          width: 100% !important;
-          margin-bottom: 40px;
+          font-size: 25px;
+          font-weight: 700;
+          font-style: italic;
+          line-height: 31px;
+          margin-bottom: 15px;
         }
       }
     }
   }
-  .jamaica-invest {
-    padding: 50px 20px;
+  a {
+    font-size: 20px;
+    font-weight: bold;
+    border: thin solid white;
+    padding: 7px 25px;
+    border-radius: 3px;
+    margin-top: 30px;
+    display: inline-block;
+    cursor: pointer;
+    &:hover {
+      background-color: white;
+      color: #1b5a8d !important;
+    }
   }
 `
 
 const jamaicaTitle = props => {
   const { inViewport, forwardedRef } = props
-  const htmlClass = inViewport ? "centergrow" : ""
   return (
-    <div
-      className={`jamaica-title centergrow-initial ` + htmlClass}
-      ref={forwardedRef}
-    >
-      <h2>Worldwide Retail Growth for Luxury Blue Mountain Coffee</h2>
+    <div className={`jamaica-title`}>
+      <h2>
+        Jamaican Blue Mountain coffee is the most sought after specialty coffee
+        in the world.
+      </h2>
     </div>
   )
 }
@@ -181,31 +141,46 @@ const Jamaica = () => {
   `)
   return (
     <JamaicaStyle>
-      <BackgroundImage id="jamaica" fluid={data.jamBg2.childImageSharp.fluid}>
+      <div id="jamaica">
         <Container>
-          <JamaicaBlock />
+          <h2>
+            Jamaican Blue Mountain coffee is the most sought after specialty
+            coffee in the world.
+          </h2>
+
           <div className="jamaica-top-3">
             <div>
-              <div className="jamaica-top-large">$120/lb</div>
-              Jamaican Blue Mountain coffee is among the world’s oldest and most
-              expensive luxury coffees, routinely valued over $100 per pound at
-              market.
+              <div className="jamaica-top-large">
+                1,000+ Acres of Production
+              </div>
+              BMB manages an estate in Jamaica’s Blue Mountains with over 1,000
+              acres of plantable coffee production, positioning our firm to be
+              the island’s largest independent producer.
             </div>
             <div>
-              <div className="jamaica-top-large">1,500+</div>
-              Producing on a fair trade estate and partnered with hundreds of
-              local farmers, Blue Mountain Best will produce and process coffee
-              on over 1,500 acres.
+              <div className="jamaica-top-large">
+                $70 million / year in sales
+              </div>
+              Valued over $100/lb across the global market, Blue Mountain Best
+              will manage a retail potential of $70 million in Blue Mountain
+              coffee per year.
             </div>
             <div>
-              <div className="jamaica-top-large">$70 million</div>
-              Guaranteeing direct trade with coffee companies around the world,
-              Blue Mountain Best will supply a retail value of $70 million in
-              Blue Mountain coffee to the luxury market per year.
+              <div className="jamaica-top-large">50% Annual ROI</div>
+              Through updated commercial practices, Blue Mountain Best can
+              produce coffee at 1/5 the production costs of similarly valued
+              beans, yielding a significant ROI for investors.
             </div>
           </div>
+          <div>
+            <h2 className="h2-below">
+              Blue Mountain Best is advancing commercial production for rare and
+              luxurious Blue Mountain coffee.
+            </h2>
+            <a onClick={() => scrollTo("#lpfooter")}>Start Investing</a>
+          </div>
         </Container>
-      </BackgroundImage>
+      </div>
     </JamaicaStyle>
   )
 }
