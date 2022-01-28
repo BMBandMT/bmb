@@ -44,9 +44,7 @@ const HeroStyle = styled.div`
         z-index: 9999;
         width: 94px;
       }
-      @media (max-width: ${variable.mobileWidth}) {
-        min-height: 650px;
-      }
+
       .hero-inner {
         max-width: 720px;
         @media (max-width: ${variable.mobileWidth}) {
@@ -54,6 +52,10 @@ const HeroStyle = styled.div`
         }
       }
       padding: 0px 60px;
+      @media (max-width: ${variable.mobileWidth}) {
+        min-height: 650px;
+        padding: 0px 20px;
+      }
       h3 {
         font-size: 20px;
         margin: 0px;
