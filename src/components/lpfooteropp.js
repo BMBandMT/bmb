@@ -92,6 +92,7 @@ const LpfooterStyle = styled.div`
           align-items: center;
           @media (max-width: ${variable.mobileWidth}) {
             flex-direction: column;
+            width: calc(100%);
           }
           &.form-row-inputs-certify {
             @media (max-width: ${variable.mobileWidth}) {

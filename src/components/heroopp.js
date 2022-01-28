@@ -32,25 +32,35 @@ const HeroStyle = styled.div`
     .hero-container {
       /* max-width: 720px;
       margin: 0px; */
+      position: relative;
       display: flex;
       align-items: center;
       justify-content: flex-start;
       min-height: 800px;
+      .thelogo {
+        position: absolute !important;
+        top: 30px;
+        right: 30px;
+        z-index: 9999;
+        width: 94px;
+      }
       @media (max-width: ${variable.mobileWidth}) {
         min-height: 650px;
       }
       .hero-inner {
         max-width: 720px;
+        @media (max-width: ${variable.mobileWidth}) {
+          margin-top: 150px;
+        }
       }
       padding: 0px 60px;
       h3 {
         font-size: 20px;
-        font-weight: 900;
         margin: 0px;
       }
       h2 {
         font-size: 60px;
-        margin: 30px 0px;
+        margin: 20px 0px;
         max-width: 500px;
       }
       p {
@@ -58,6 +68,7 @@ const HeroStyle = styled.div`
         font-weight: normal;
         margin: 0px;
         line-height: 24px;
+        max-width: 520px;
       }
       a {
         font-size: 20px;
@@ -90,6 +101,10 @@ class Hero extends Component {
           fluid={this.props.data.heroBg.childImageSharp.fluid}
         >
           <Container className="hero-container">
+            <Img
+              className="thelogo"
+              fluid={this.props.data.logo.childImageSharp.fluid}
+            />
             <div className="hero-inner">
               <h3>JAMAICAN BLUE MOUNTAIN COFFEE</h3>
               <h2>Invest in luxury coffee production</h2>
@@ -131,6 +146,13 @@ export default props => (
           childImageSharp {
             fixed(width: 142, height: 690) {
               ...GatsbyImageSharpFixed
+            }
+          }
+        }
+        logo: file(relativePath: { eq: "BlueMountainBestLogo.png" }) {
+          childImageSharp {
+            fluid(maxWidth: 500) {
+              ...GatsbyImageSharpFluid
             }
           }
         }

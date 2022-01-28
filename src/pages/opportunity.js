@@ -12,13 +12,18 @@ import Mt from "../components/bmb"
 import LpFooter from "../components/lpfooteropp"
 import BmbTouch from "../components/bmbtouch"
 const IndexStyle = styled.div`
-font-family: meno-banner, serif
-font-weight: 400;
-font-style: normal;
-h2,h3,h4,h5,h6{
-font-family: meno-banner, serif;
-font-weight: 700;
-}
+  font-family: meno-banner, serif !important;
+  font-weight: 400;
+  font-style: normal;
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: meno-banner, serif;
+    font-weight: 500;
+  }
+
   .squaregrow-initial {
     transition: 0.6s;
     position: relative;

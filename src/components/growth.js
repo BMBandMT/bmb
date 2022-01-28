@@ -47,7 +47,7 @@ const JamaicaStyle = styled.div`
         }
         .jamaica-top-large {
           font-size: 25px;
-          font-weight: 700;
+          font-weight: 600;
           font-style: italic;
           line-height: 31px;
           margin-bottom: 15px;

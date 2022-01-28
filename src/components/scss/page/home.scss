@@ -320,3 +320,9 @@
     color: $blue;
   }
 }
+#opp {
+  .footer-main-menu,
+  .footer-under-right {
+    display: none;
+  }
+}
