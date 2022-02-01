@@ -87,7 +87,7 @@ class Conf extends Component {
                 <p>
                   Certified Jamaican Blue Mountain beans, which retain a
                   protected status in the region, earn the world’s highest
-                  unitvvalue for their export. Where the average global export
+                  unit value for their export. Where the average global export
                   price for Arabica coffee hovers around $4 per
                   kilogram, Jamaican Blue Mountain beans command an average unit
                   price of roughly $22-$35 for the same quantity. At market,
