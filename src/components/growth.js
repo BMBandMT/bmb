@@ -177,7 +177,9 @@ const Jamaica = () => {
               Blue Mountain Best is advancing commercial production for rare and
               luxurious Blue Mountain coffee.
             </h2>
-            <a onClick={() => scrollTo("#lpfooter")}>Start Investing</a>
+            <a className="opp-mid-link" onClick={() => scrollTo("#lpfooter")}>
+              Start Investing
+            </a>
           </div>
         </Container>
       </div>

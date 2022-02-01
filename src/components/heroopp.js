@@ -117,7 +117,12 @@ class Hero extends Component {
                 coffee industry, Blue Mountain Best, incorporated in the U.S.,
                 is accelerating a beloved and historic coffee product worldwide.
               </p>
-              <a onClick={() => scrollTo("#lpfooter")}>Get Started</a>
+              <a
+                className="opp-hero-link"
+                onClick={() => scrollTo("#lpfooter")}
+              >
+                Get Started
+              </a>
             </div>
           </Container>
         </BackgroundImage>
