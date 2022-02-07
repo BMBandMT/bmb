@@ -439,18 +439,6 @@ const LpFooter = () => {
             </div>
 
             <div className="form-row">
-              <label>Your City</label>
-              <div className="form-row-inputs form-row-inputs-city">
-                <input type="text" id="city" name="city" placeholder="City" />
-                <input
-                  type="text"
-                  id="state"
-                  name="state"
-                  placeholder="State"
-                />
-              </div>
-            </div>
-            <div className="form-row">
               <label>Your Email*</label>
               <div className="form-row-inputs form-row-inputs-email">
                 <input
@@ -475,27 +463,6 @@ const LpFooter = () => {
               </div>
             </div>
 
-            <div className="form-row">
-              <label>Best Time to Call</label>
-              <div className="form-row-inputs form-row-inputs-time">
-                <div className="radio-container">
-                  <input type="radio" value="morning" name="times" />
-                  <div>Morning</div>
-                </div>
-                <div className="radio-container">
-                  <input type="radio" value="noon" name="times" />
-                  <div>Noon</div>
-                </div>
-                <div className="radio-container">
-                  <input type="radio" value="afternoon" name="times" />
-                  <div>Afternoon</div>
-                </div>
-                <div className="radio-container">
-                  <input type="radio" value="evening" name="times" />
-                  <div>Evening</div>
-                </div>
-              </div>
-            </div>
             <div className="form-row">
               <label></label>
               <div className="form-row-inputs form-row-inputs-certify">
