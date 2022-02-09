@@ -391,7 +391,7 @@ const LpFooter = () => {
         fluid={data.footerBg.childImageSharp.fluid}
       >
         <Container>
-          <h2>Invest in Jamaican Blue Mountain coffee.</h2>
+          <h2>Invest in Blue Mountain coffee.</h2>
           <h3>The World’s Most Sought After</h3>
           <div className="form-copy">
             <p>
