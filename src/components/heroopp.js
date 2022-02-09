@@ -108,10 +108,10 @@ class Hero extends Component {
               fluid={this.props.data.logo.childImageSharp.fluid}
             />
             <div className="hero-inner">
-              <h3>JAMAICAN BLUE MOUNTAIN COFFEE</h3>
+              <h3>BLUE MOUNTAIN COFFEE</h3>
               <h2>Invest in luxury coffee production</h2>
               <p>
-                Blue Mountain Best is a producer of Jamaican Blue Mountain
+                Blue Mountain Best is a producer of Blue Mountain
                 coffee, among the most rare and sought after specialty coffees
                 in the world. Advancing agricultural production in a thriving
                 coffee industry, Blue Mountain Best, incorporated in the U.S.,
