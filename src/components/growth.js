@@ -144,7 +144,7 @@ const Jamaica = () => {
       <div id="jamaica">
         <Container>
           <h2>
-            Jamaican Blue Mountain coffee is the most sought after specialty
+            Blue Mountain coffee is the most sought after specialty
             coffee in the world.
           </h2>
 
@@ -153,9 +153,9 @@ const Jamaica = () => {
               <div className="jamaica-top-large">
                 1,000+ Acres of Production
               </div>
-              BMB manages an estate in Jamaica’s Blue Mountains with over 1,000
+              BMB manages a Blue Mountain estate with over 1,000
               acres of plantable coffee production, positioning our firm to be
-              the island’s largest independent producer.
+              among the largest independent producers of Blue Mountain coffee.
             </div>
             <div>
               <div className="jamaica-top-large">
