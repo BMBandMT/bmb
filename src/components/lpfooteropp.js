@@ -395,7 +395,7 @@ const LpFooter = () => {
           <h3>The World’s Most Sought After</h3>
           <div className="form-copy">
             <p>
-              With a minimum investment of $25,000, investing in Blue Mounatin
+              With a minimum investment of $25,000, investing in Blue Mountain
               Best secures profit from our luxury coffee estate. If you’re an
               accredited investor and woud like to learn more, please fill out
               the form below and our team will reach out to you.
