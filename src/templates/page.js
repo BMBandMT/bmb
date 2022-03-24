@@ -6,10 +6,12 @@ import styled from "styled-components"
 import "../components/scss/page/home.scss"
 import "../components/scss/page/services.scss"
 import "../components/scss/page/about.scss"
+import "../components/scss/page/awp.scss"
 import SEO from "../components/seo"
 import { ReactTypeformEmbed } from "react-typeform-embed"
 
 import loadable from "@loadable/component"
+import { ConsoleView } from "react-device-detect"
 
 // Sort and display the different slice options
 const PostSlices = ({ slices, blog }) => {
@@ -18,6 +20,7 @@ const PostSlices = ({ slices, blog }) => {
     if (slice.primary) {
       if (slice.primary.slice_id != undefined) {
         var sliceID = slice.primary.slice_id.text
+        console.log(slice.primary.slice_id)
       }
     }
     const res = (() => {
@@ -61,6 +64,20 @@ const PostSlices = ({ slices, blog }) => {
               className="slice-wrapper slice-contact"
             >
               {<ContactSlice slice={slice} />}
+            </div>
+          )
+
+        case "awp-middle":
+          const AwpMiddleSlice = loadable(() =>
+            import(`../components/slices/AwpMiddleSlice`)
+          )
+          return (
+            <div
+              id={"slice-id-" + sliceID}
+              key={index}
+              className="slice-wrapper slice-awp-middle"
+            >
+              {<AwpMiddleSlice slice={slice} />}
             </div>
           )
 
@@ -517,6 +534,10 @@ export const postQuery = graphql`
             }
           }
           ... on PrismicPaBodyContact {
+            id
+            slice_type
+          }
+          ... on PrismicPaBodyAwpMiddle {
             id
             slice_type
           }

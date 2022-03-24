@@ -17,16 +17,7 @@
       "type" : "Slices",
       "fieldset" : "Slice zone",
       "config" : {
-        "labels" : {
-          "basic_section" : [ ],
-          "columns_section" : [ ],
-          "left_right_section" : [ ],
-          "entity_query" : [ ],
-          "slideshow" : [ ],
-          "block_reference" : [ ],
-          "contact" : [ ],
-          "hero" : [ ]
-        },
+        "labels" : null,
         "choices" : {
           "basic_section" : {
             "type" : "Slice",
@@ -92,10 +83,10 @@
               "content" : {
                 "type" : "StructuredText",
                 "config" : {
-                  "multi" : "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
+                  "multi" : "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,o-list-item",
                   "allowTargetBlank" : true,
                   "label" : "Content",
-                  "labels" : [ "cta-button", "right-align", "center-align", "h2-light", "h3-light", "typeform-cta" ]
+                  "labels" : [ "cta-button", "right-align", "center-align", "h2-light", "h3-light", "typeform-cta", "featured-opp", "start-investing" ]
                 }
               }
             },
@@ -169,9 +160,10 @@
               "content" : {
                 "type" : "StructuredText",
                 "config" : {
-                  "multi" : "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
+                  "multi" : "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,o-list-item",
                   "allowTargetBlank" : true,
-                  "label" : "Content"
+                  "label" : "Content",
+                  "labels" : [ "cta-button", "right-align", "center-align", "h2-light", "h3-light", "typeform-cta", "featured-opp", "start-investing", "awp-form" ]
                 }
               }
             }
@@ -233,7 +225,7 @@
               "left_content" : {
                 "type" : "StructuredText",
                 "config" : {
-                  "multi" : "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
+                  "multi" : "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,o-list-item",
                   "allowTargetBlank" : true,
                   "label" : "Left Content",
                   "labels" : [ "cta-button", "right-align", "center-align", "typeform-cta" ]
@@ -257,7 +249,7 @@
               "right_content" : {
                 "type" : "StructuredText",
                 "config" : {
-                  "multi" : "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
+                  "multi" : "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,o-list-item",
                   "allowTargetBlank" : true,
                   "label" : "Right Content",
                   "labels" : [ "cta-button", "right-align", "center-align", "h2-light", "h3-light", "typeform-cta" ]
@@ -266,7 +258,7 @@
               "right_content_above_form" : {
                 "type" : "StructuredText",
                 "config" : {
-                  "multi" : "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+                  "multi" : "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl",
                   "label" : "Right Content Above Form"
                 }
               },
@@ -370,7 +362,7 @@
               "image_copy" : {
                 "type" : "StructuredText",
                 "config" : {
-                  "multi" : "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
+                  "multi" : "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,o-list-item",
                   "allowTargetBlank" : true,
                   "label" : "Image Copy"
                 }
@@ -446,6 +438,15 @@
                 }
               }
             },
+            "repeat" : { }
+          },
+          "awp-middle" : {
+            "type" : "Slice",
+            "fieldset" : "awp-middle",
+            "description" : "AWP Middle",
+            "icon" : "airport_shuttle",
+            "display" : "list",
+            "non-repeat" : { },
             "repeat" : { }
           }
         }

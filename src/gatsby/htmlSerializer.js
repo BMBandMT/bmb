@@ -1,8 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
-
-
-
+import AwpForm from "../components/awpform"
+import scrollTo from "gatsby-plugin-smoothscroll"
 const linkResolver = (doc, content, linkClass) => {
   // Route for blog posts
   if (doc.type === "blog_post") {
@@ -35,9 +34,25 @@ const linkResolver = (doc, content, linkClass) => {
 }
 
 const htmlSerializer = (type, element, content, children) => {
-  var link = ''
+  var link = ""
   switch (type) {
-    case "hyperlink": 
+    case "label":
+      console.log(content)
+      if (element.data.label === "awp-form") {
+        return <AwpForm />
+      }
+      if (element.data.label === "start-investing") {
+        return (
+          <div
+            className="start-investing"
+            onClick={() => scrollTo("#middle-form")}
+          >
+            {content}
+          </div>
+        )
+      }
+
+    case "hyperlink":
       if (element.data.link_type == "Document") {
         if (children[0].props != null) {
           var linkClass = children[0].props.className
@@ -49,19 +64,18 @@ const htmlSerializer = (type, element, content, children) => {
         link = linkResolver(element.data, content, linkClass)
       }
       return link
-    case "image": 
-      const width =  element.dimensions.width ? element.dimensions.width : ""
-      const height =  element.dimensions.height ? element.dimensions.height : ""
-      const alt =  element.alt ? element.alt : ""
-      if(element.url){
+    case "image":
+      const width = element.dimensions.width ? element.dimensions.width : ""
+      const height = element.dimensions.height ? element.dimensions.height : ""
+      const alt = element.alt ? element.alt : ""
+      if (element.url) {
         return (
           <p className="block-img">
-          <img src={element.url} width={width} height={height} alt={alt} />
+            <img src={element.url} width={width} height={height} alt={alt} />
           </p>
         )
-      }
-      else{
-        return ''
+      } else {
+        return ""
       }
     // First differentiate between a label and a preformatted field (e.g. the Code Block slice)
     default: {
