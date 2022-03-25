@@ -13,6 +13,9 @@ const AwpStyle = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    .what-are-link {
+      cursor: pointer;
+    }
     .column-item {
       width: calc(50% - 20px);
       @media (max-width: ${variable.mobileWidth}) {
@@ -302,7 +305,10 @@ export const AwpMiddleSlice = ({ slice }) => {
                   </div>
                 </div>
                 <p>
-                  <div className="">
+                  <div
+                    className="what-are-link"
+                    onClick={() => scrollTo("#slice-id-about-awp")}
+                  >
                     <strong>What are alternative investments?</strong>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"

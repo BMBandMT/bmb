@@ -25,6 +25,9 @@
           font-weight: 400;
           font-family: Georgia;
           margin: 0px;
+          strong {
+            color: white;
+          }
           @include mobile() {
             font-size: 40px;
           }
