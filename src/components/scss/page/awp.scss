@@ -10,31 +10,28 @@
 #slice-id-awp-hero {
   section {
     .basic-slice-container {
-      height: 740px;
+      height: 600px;
       display: flex;
       align-items: center;
       justify-content: flex-start;
-      @include mobile() {
-        height: 600px;
-      }
       .section-content {
         max-width: 700px;
         h2 {
           color: white;
-          font-size: 60px;
+          font-size: 50px;
           font-weight: 400;
           font-family: Georgia;
           margin: 0px;
         }
         h3 {
           color: white;
-          font-size: 60px;
+          font-size: 50px;
           margin: 0px 0px 10px 0px;
           padding-bottom: 15px;
           border-bottom: 1px solid white;
         }
         p {
-          font-size: 20px;
+          font-size: 18px;
           max-width: 554px;
           color: white;
         }
