@@ -67,7 +67,7 @@ const PostSlices = ({ slices, blog }) => {
             </div>
           )
 
-        case "awp-middle":
+        case "awp":
           const AwpMiddleSlice = loadable(() =>
             import(`../components/slices/AwpMiddleSlice`)
           )
@@ -537,7 +537,7 @@ export const postQuery = graphql`
             id
             slice_type
           }
-          ... on PrismicPaBodyAwpMiddle {
+          ... on PrismicPaBodyAwp {
             id
             slice_type
           }

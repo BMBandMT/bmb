@@ -442,9 +442,18 @@
           },
           "awp-middle" : {
             "type" : "Slice",
-            "fieldset" : "awp-middle",
+            "fieldset" : "awp_middle",
             "description" : "AWP Middle",
             "icon" : "airport_shuttle",
+            "display" : "list",
+            "non-repeat" : { },
+            "repeat" : { }
+          },
+          "awp" : {
+            "type" : "Slice",
+            "fieldset" : "awp",
+            "description" : "awp",
+            "icon" : "add_a_photo",
             "display" : "list",
             "non-repeat" : { },
             "repeat" : { }
