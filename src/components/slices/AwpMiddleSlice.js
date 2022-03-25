@@ -232,6 +232,9 @@ const AwpStyle = styled.div`
         font-weight: 400;
         color: rgba(255, 255, 255, 0.3);
         margin: 0px;
+        @media (max-width: ${variable.mobileWidth}) {
+          font-size: 40px;
+        }
       }
     }
     .featured-right {
