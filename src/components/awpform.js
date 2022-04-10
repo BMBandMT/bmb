@@ -173,7 +173,7 @@ const AwpForm = () => {
 
           <div className="form-row">
             <div className="form-row-inputs form-row-inputs-select1">
-              <select required>
+              <select required name="ideal-investment">
                 <option value="">Ideal Investment*</option>
 
                 <option value="25000-50000">$25,000 - $50,000</option>
@@ -185,7 +185,7 @@ const AwpForm = () => {
           </div>
           <div className="form-row">
             <div className="form-row-inputs form-row-inputs-select2">
-              <select required>
+              <select required name="looking-to-invest">
                 <option value="">I’m Looking to Invest*</option>
                 <option value="immediately">Immediately</option>
                 <option value="within-14-days">Within 14 days</option>
